@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mackvord-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mackvord-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Oracle,查询,过滤,排序," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基本查询、过滤、排序，多表查询、子查询以及连接Oracle数据库碰到的一些问题的总结">
+<meta name="keywords" content="Oracle,查询,过滤,排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle基础篇">
+<meta property="og:url" content="https://mackvord.github.io/database/4240282551.html">
+<meta property="og:site_name" content="Mackvord&#39;s Blogs">
+<meta property="og:description" content="基本查询、过滤、排序，多表查询、子查询以及连接Oracle数据库碰到的一些问题的总结">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_13-35-32.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_13-31-37.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_13-22-43.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_16-53-22.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_17-14-53.png">
+<meta property="og:updated_time" content="2018-09-08T03:59:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle基础篇">
+<meta name="twitter:description" content="基本查询、过滤、排序，多表查询、子查询以及连接Oracle数据库碰到的一些问题的总结">
+<meta name="twitter:image" content="https://mackvord.github.io/picture/2018-08-16/Snipaste_2018-08-21_13-35-32.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mackvord.github.io/database/4240282551.html"/>
+
+
+
+
+
+  <title>Oracle基础篇 | Mackvord's Blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/mackvord" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mackvord's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">1.00110000101111e+24</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-documents">
+          <a href="/documents" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-movie">
+          <a href="/movie/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-film"></i> <br />
+            
+            电影
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+<link href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<link href="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.js"></script>
+<script src="/js/src/sitemap.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mackvord.github.io/database/4240282551.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mackvord">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/wallhaven-62220.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mackvord's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Oracle基础篇</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-16T10:07:26+08:00">
+                2018-08-16
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-08T11:59:00+08:00">
+                2018-09-08
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">database</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/database/4240282551.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/database/4240282551.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  4.2k
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></p><p class="description">基本查询、过滤、排序，多表查询、子查询以及连接Oracle数据库碰到的一些问题的总结</p><br><a id="more"></a><p></p>
+<h2 id="Oracle简介"><a href="#Oracle简介" class="headerlink" title="Oracle简介"></a>Oracle简介</h2><p>Oracle数据库是由Oracle（甲骨文）公司推出的一款关系型数据库，Oracle公司在关系型数据库领域的地位是不可撼动的，就像Java在后台开发中具有无可比拟的优势一样，现在最为流行的开源数据库MySQL也被Oracle公司收购，成为了Oracle公司旗下的产品。</p>
+<hr>
+
+<h2 id="Oracle的基本操作"><a href="#Oracle的基本操作" class="headerlink" title="Oracle的基本操作"></a>Oracle的基本操作</h2><p><span id="inline-purple"><strong>SQLPlus</strong></span></p>
+<p><code>SQLPlus</code>是Oracle提供的连接数据库的工具，也可以直接使用windows提供的命令行连接数据库，在命令行下使用<code>SQLPlus</code>连接数据库：<code>sqlplus 用户名/密码</code></p>
+<p><span id="inline-purple"><strong>格式化命令</strong></span></p>
+<p>在windows命令行下可能会出现数据表显示格式乱的情况，解决的办法是将命令行窗体调大些，如果数据表包含的数据条数比较多，可能会出现表字段重复的问题，此时可以对显示进行格式化，方便阅读，语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">查看行宽：SHOW LINESIZE;</span><br><span class="line">设置行宽：SET LINESIZE 300;</span><br><span class="line">设置列宽：COLUM 列名 FOR 列宽; || 简写方式：COL 列名 FOR 列宽;</span><br><span class="line">    |- 字符列：COLUM TNAME FORMAT a8;其中a8表示列宽为8个字符</span><br><span class="line">    |- 数字列：COLUM TNAME FORMAT 9999;其中9999表示列宽为4为数字</span><br><span class="line">设置每页长度：SET PAGESIZE 30;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-purple"><strong>切换用户</strong></span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">命令：CONN 用户名/密码 [AS SYSDBA]</span><br><span class="line">	注意：如果当前的用户为sys,那么必须写上“AS SYSDBA”[]不用写，否则无法登录</span><br><span class="line">命令：show user，显示用户名</span><br></pre></td></tr></table></figure>
+<p><span id="inline-purple"><strong>HOST指令</strong></span></p>
+<p>在SQLplus中除了可以使用Oracle定义的命令另外，也可以使用HOST指令调用本机的操作系统命令，    例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo命令： HOST echo helloworld</span><br><span class="line">清屏命令：HOST CLS</span><br><span class="line">文件拷贝命令：copy 源文件路径 目标文件路径，HOST copy 源文件路径 目标文件路径</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="SQL查询"><a href="#SQL查询" class="headerlink" title="SQL查询"></a>SQL查询</h2><p>SQL指的是结构化的查询语言，SQL常用的语法：<code>SELECT、FROM、WHERE、GROUP BY、HAVING、ORDER BY、INSERT、UPDATE、DELETE、CREATE、DORP、ALTER、GRANT、REVOKE</code>。<br>SQL分为三种类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DML（数据操作语言，开发中使用的部分）：主要指数据库的查询与更新操作</span><br><span class="line">DDL（数据定义语言，开发前设计）：主要指的是数据对象的创建（表、用户）</span><br><span class="line">DCL（数据控制语言，系统管理人员）：主要进行权限的管理操作（需要结合用户来观察），此部分由DBA负责</span><br></pre></td></tr></table></figure>
+<p><strong>基本查询</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、查询一个用户下的所有表</span><br><span class="line">    |- SELECT * FROM tab;</span><br><span class="line">2、查询一个表的结构</span><br><span class="line">    |- DESC 表名称;</span><br></pre></td></tr></table></figure>
+<p><strong>SQL限定查询</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">SELECT [DISTING] * 列名称,别名 列名称,别名 列名称,别名 </span><br><span class="line">FORM 表名称 别名</span><br><span class="line">WHERE 过滤条件</span><br><span class="line"></span><br><span class="line">其中过滤条件：</span><br><span class="line">	关系运算符：&gt;、&lt;、&gt;=、&lt;=、&lt;&gt;(!=)</span><br><span class="line">	逻辑运算符：AND、OR、NOT</span><br><span class="line">	范围运算符：BETWEEN...AND</span><br><span class="line">	谓词范围：IN、NOTIN</span><br><span class="line">	空判断：IS NULL、IS NOT NULL</span><br><span class="line">	模糊查询：LIKE、NOT LIKE</span><br><span class="line"></span><br><span class="line">以SCOTT用户下的EMP表为例</span><br><span class="line"></span><br><span class="line">1、 查询所有工资大于5000的信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHEER SAL&gt;5000;</span><br><span class="line"></span><br><span class="line">2、 查询部门编号为30的雇员姓名、职位以及工资</span><br><span class="line">    |=&gt; SELECT ENAME,JOB,SAL FROM EMP WHERE DEPTNO=30;</span><br><span class="line"></span><br><span class="line">3、 查询工资不等于5000的员工姓名信息</span><br><span class="line">    |=&gt; SELECT ENAME,姓名 FORM EMP WHERE SAL&lt;&gt;5000;</span><br><span class="line"></span><br><span class="line">4、 查询工资在2000到5000之间的员工姓名信息</span><br><span class="line">    |=&gt; SELECT ENAEM FROM EMP SAL&gt;2000 AND SAL&lt;5000;</span><br><span class="line"></span><br><span class="line">5、 查询工资在2000到5000之间的员工姓名信息，</span><br><span class="line">    |=&gt; SELECT ENAEM FROM EMP BETWEEN 2000 AND 5000; </span><br><span class="line">    |=&gt; 相比上面的那一句，这一句在性能上有所提升，因为只匹配一个条件</span><br><span class="line"></span><br><span class="line">6、 日期的写法</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE HIREDATE BETWEEN &apos;01-1月 -81&apos; AND &apos;31-12月 -81&apos;;</span><br><span class="line"></span><br><span class="line">7、 查询佣金为空的雇员姓名</span><br><span class="line">    |=&gt; SELECT ENAME FROM EMP WHERE COMM IS NULL;</span><br><span class="line"></span><br><span class="line">8、查询指定雇员编号范围内的所有雇员信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE EMPNO IN (7654,7900,7902,4563);</span><br><span class="line">    |=&gt; IN 类似于BETWEEN...AND,但是范围较小，有限元素个数</span><br></pre></td></tr></table></figure>
+<p><strong>模糊查询</strong></p>
+<p>模糊查询事实上也是限定查询的一种，只是限定条件的不同，模糊查询的限定条件为<code>LIKE</code>或者<code>NOT LIKE</code></p>
+<figure class="highlight plain"><figcaption><span>Example:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1、 查询ename中以B开头的所有信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE ENAME LIKE &apos;B%&apos;;</span><br><span class="line"></span><br><span class="line">2、 查询ename中包含有B的所有信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE ENAME LIKE &apos;%B%&apos;;</span><br><span class="line"></span><br><span class="line">3、 查询ename中第二个字母为B的所有信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE ENAME LIKE &apos;_B%&apos;;</span><br><span class="line"></span><br><span class="line">4、 查询ename中为任意字母的所有信息，相当于全部查询，但是不推荐这样进行查询，性能低</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE ENAME LIKE &apos;%%&apos;;</span><br><span class="line"></span><br><span class="line">5、 查询姓名中没有‘R’的员工(模糊查询)</span><br><span class="line">    |=&gt; SELECT ENAME FROM EMP WHERE ENAME NOT LIKE &apos;%R%&apos;;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><p> <strong>Tips</strong><br>1、WHERE语句一般写在在FROM语句的后面，并且紧随其后执行、SELECT语句控制列的显示数据、WHERE控制着行的显示数据，SELECT语句落后于WHERE执行，SELECT语句可以定义别名，WHERE语句不能定义别名。<br>2、在模糊查询中，如果不设置关键字（%%）、表示全部查询。<br>3、使用NOT IN进行查询的时候，查询范围中不能出现NULL，否则不会有任何查询结果返回。<br></p></div>
+
+<hr>
+
+<h2 id="查询排序"><a href="#查询排序" class="headerlink" title="查询排序"></a>查询排序</h2><p>排序是根据需求对查询结果进行处理，方便开发人员更好地分析和处理数据。</p>
+<figure class="highlight plain"><figcaption><span>基本语法</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[2、控制要显示的数据列]SELECT [DISTINCT] * 列名称,别名 列名称,别名 列名称,别名 </span><br><span class="line">[1、确定数据来源]FORM 表名称 别名</span><br><span class="line">[3、确定数据满足的条件]WHERE 过滤条件</span><br><span class="line">[4、针对查询结果进行排序]ORDER BY 字段 [ASC | DESC]，字段[ASC | DESC]...</span><br><span class="line"></span><br><span class="line">// ASC为升序(从小到大)、DESC为降序（从大到小）、DISTINCT为去除重复，默认为升序</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、查询部门编号为30的雇员姓名、职位、年薪，并按月薪进行升序</span><br><span class="line">    |=&gt; SELECT ENAME,JOB,SAL*12 INCOME FROM EMP WHERE DEPTNO=30 ORDER BY SAL;</span><br><span class="line"></span><br><span class="line">2、查询部门编号为30的雇员姓名、职位、年薪，并按年薪进行升序（只有ORDER BY子句可以使用SELECT语句的别名）</span><br><span class="line">    |=&gt; SELECT ENAME,JOB,SAL*12 INCOME FROM EMP WHERE DEPTNO=30 ORDER BY INCOME;</span><br><span class="line"></span><br><span class="line">3、查询emp表所有信息，按月薪升序</span><br><span class="line">    |=&gt; SELECT * FROM EMP ORDER BY SAL ASC;</span><br><span class="line"></span><br><span class="line">4、查询部门编号为30的雇员编号、雇员姓名、职位、年薪，按月薪升序、雇员编号降序</span><br><span class="line">    |=&gt; SELECT EMPNO,ENAME,JOB,SAL*12 INCOME FROM EMP WHERE DEPTNO=30 ORDER BY SAL ASC,EMPNO DESC;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="单行函数"><a href="#单行函数" class="headerlink" title="单行函数"></a>单行函数</h2><p><code>单行函数格式：返回值 函数名称（参数）</code></p>
+<p><strong>字符串函数</strong></p>
+<p>单行函数格式：返回值 函数名称（参数）</p>
+<table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符串 UPPER(列 or 字符串)</td>
+<td>将传入的字符串或列变为大写</td>
+</tr>
+<tr>
+<td>字符串 LOWER(列 or 字符串)</td>
+<td>将传入的字符串或列变为小写</td>
+</tr>
+<tr>
+<td>字符串 INITCAP(列 or 字符串)</td>
+<td>开头首字母大写，其余字母小写</td>
+</tr>
+<tr>
+<td>数字 LENGHT(列 or 字符串)</td>
+<td>取得指定字符串的长度</td>
+</tr>
+<tr>
+<td>字符串 SUBSTR (列 or 字符串，开始索引，长度)</td>
+<td>进行字符串的截取，如果没有设置长度，则表示从开始索引一直截取到结尾</td>
+</tr>
+<tr>
+<td>字符串 REPLACE(列 or 字符串，旧内容，新内容)</td>
+<td>将指定的新数据替换掉旧数据</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><figcaption><span>Example:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、 查询姓名长度为5的所有员工信息</span><br><span class="line">    |=&gt; SELECT * FROM EMP WHERE LENGTH(ENAME)=5;</span><br><span class="line">2、 查询员工姓名以及取得员工姓名后三位的信息</span><br><span class="line">    |=&gt; SELECT ENAME,SUBSTR(ENAME,LENGTH(ENAME)-2) FROM EMP;</span><br></pre></td></tr></table></figure>
+<p><strong>数值函数</strong></p>
+<p>数值函数主要是进行数值的处理，核心的函数有三个</p>
+<table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字 ROUND(列 or 数字 [,小数位])</td>
+<td>实现数据的四舍五入，可以设置保留的小数位</td>
+</tr>
+<tr>
+<td>数字 TRUNC(列 or 数字 [,小数位])</td>
+<td>实现数据的截取，即不进位</td>
+</tr>
+<tr>
+<td>数字 MOD(列 or 数字 ,列 or 数字…)</td>
+<td>求模</td>
+</tr>
+</tbody>
+</table>
+<p><strong>日期函数</strong></p>
+<p>要处理日期，有一个前提就是必须要知道当前的日期，Oracle提供了一个专门的伪劣“SYSDTAE”，不包含时分秒，(SYSTIMESTAMP，时间戳，包含时分秒)伪劣：可以作为列来使用，但又不是真正的列。</p>
+<pre>
+日期操作公式：
+    日期 + 数字 = 日期（表示若干天之后的日期）
+    日期 - 数字 = 日期（表示若干天之前的日期）
+    日期 - 日期 = 数字（天数）
+</pre>
+
+<table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADD_MONTHS(列 or 日期，月数)</td>
+<td>表示在指定的日期增加若干个月之后日期</td>
+</tr>
+<tr>
+<td>数字 MONTHS_BETWEEN(列 or 日期，列 or 日期)</td>
+<td>返回两个日期之间所经过的月数</td>
+</tr>
+<tr>
+<td>日期 LAST_DAY(列 or 日期)</td>
+<td>取得指定日期所在月的最后一天</td>
+</tr>
+<tr>
+<td>日期 NEXT_DAY(列 or 日期，星期X)</td>
+<td>返回下一个一周时间数对应的日期</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">计算年份，有两种方法：</span><br><span class="line">	方法一：（日期 - 日期）/ 12 = 年  这种方法无法处理闰年的问题</span><br><span class="line">	方法二：MONTHS_BETWEEN(SYSDATE,HIREDATE) / 12 = 年</span><br></pre></td></tr></table></figure>
+<p><strong>举个栗子：以年、月、日的方式计算出每个雇员的到现在为止的雇佣年限。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算年份：ROUND(MONTHS_BETWEEN(SYSDATE,HIREDATE)/12)YEAR</span><br><span class="line">计算月份：ROUND(MOD(MONTHS_BETWEEN(SYSDATE,HIREDATE),12))MONTH</span><br></pre></td></tr></table></figure>
+<p>年份和月份的计算相对来说比较简单，但天数的计算比较麻烦，在Oracle之中计算天数的方法只有一种，就是日期1 - 日期2，日期1很容就知道是SYSDATE，但是日期2是多少？由于时间跨度比较大，并且每个月的日期不是固定的，所以要想精确计算天数，必须保证(日期1 - 日期2) &lt;= 30 ，所以计算天数的完整语句因该是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ROUND(SYSDATE - ADD_MONTHS(HIREDATE,MONTHS_BETWEEN(SYSDATE,HIREDATE)))DAY，</span><br></pre></td></tr></table></figure>
+<p><code>注：进行四舍五入是因为有时分秒</code></p>
+<p><strong>转换函数</strong></p>
+<p>转换函数主要是进行三类数据的相互转换操作，数字型、字符串型、日期型，转换函数如下：</p>
+<table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字符串 TO_CHAR(列 or 数字，转换格式)</td>
+<td>将日期或者数字转换为指定结构的字符串</td>
+</tr>
+<tr>
+<td>日期 TO_DATE(列 or 字符串，转换格式)</td>
+<td>将日期型的字符串转换为日期型数据</td>
+</tr>
+<tr>
+<td>数字 TO_NUMBER(列 or 字符串)</td>
+<td>将字符串变为数字</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><figcaption><span>TO_CHAR()函数的转换格式：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">日期：年（yyyy）、月（mm）、日（dd）</span><br><span class="line">时间：时（hh、hh24）、分（mi）、秒（ss）;</span><br><span class="line">数字：任意数字（9）、本地货币符号（L）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>举个栗子：格式化数字</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT TO_CHAR(36374578888,&apos;L999,999,999,999&apos;) FROM DUAL;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><h3 id="多表查询的形式"><a href="#多表查询的形式" class="headerlink" title="多表查询的形式"></a>多表查询的形式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[2、控制要显示的数据列]SELECT [DISTINCT] * 列名称,别名 列名称,别名 列名称,别名... </span><br><span class="line">[1、确定数据来源]FORM 表名称 别名,表 别名...</span><br><span class="line">[3、确定数据满足的条件]WHERE 过滤条件</span><br><span class="line">[4、针对查询结果进行排序]ORDER BY 字段 [ASC | DESC]，字段[ASC | DESC]...</span><br></pre></td></tr></table></figure>
+<h3 id="表连接"><a href="#表连接" class="headerlink" title="表连接"></a>表连接</h3><p><strong>内连接</strong></p>
+<p>内连接也叫等值连接，所有满足条件的数据都会被显示出来，如果条件不满足，则无法显示。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.ename,e.job,d.deptno,d.loc FROM EMP e,DEPT d WHERE e.deptno = d.deptno;</span><br></pre></td></tr></table></figure>
+<p><strong>外连接</strong></p>
+<p>外连接相比等值连接，可以查询左表或者右表中所有的数据，无论条件是否满足。外连接分为左外连接和右外连接。左外连接：返回左表中所有的数据，即使在右表中没有匹配的行。右外连接：返回右表中所有的数据，即使左表中没有匹配的行。</p>
+<figure class="highlight plain"><figcaption><span>Oracle语法</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">左外连接： 字段 = 字段（+）</span><br><span class="line">右外连接： 字段（+）= 字段</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>SQL语法（通用）</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 左外连接</span><br><span class="line">SELECT column_name...</span><br><span class="line">FROM table1</span><br><span class="line">LEFT [OUTER] JOIN table2</span><br><span class="line">ON table1.column_name=table2.column_name</span><br><span class="line">// 右外连接</span><br><span class="line">SELECT column_name...</span><br><span class="line">FROM table1</span><br><span class="line">RIGHT [OUTER] JOIN table2</span><br><span class="line">ON table1.column_name=table2.column_name</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.ename,e.job,m.ename mgr FROM emp e,emp m WHERE e.mgr = m.empno(+);</span><br><span class="line">SELECT e.ename,e.job,m.ename mgr FROM emp e LEFT JOIN emp m ON e.mgr = m.empno;</span><br></pre></td></tr></table></figure>
+<h3 id="笛卡尔积"><a href="#笛卡尔积" class="headerlink" title="笛卡尔积"></a>笛卡尔积</h3><p>笛卡尔积是数学上的一个公式，即两个集合的乘积，数据库的多表操作也是基于这个公式，但是在实际情况下，不同的数据表有可能存在相同的字段，这就导致了在最原始的多表查询的操作中出现了错误数据的情况，例如：EMP,DEPT两张表，两张表存在关联字段<code>deptno</code>，当我们执行查询操作：<code>select * from emp,dept;</code>的时候，会发现得到的结果是两张表记录的乘积：</p>
+<p><img src="/picture/2018-08-16/Snipaste_2018-08-21_13-35-32.png" alt="count"></p>
+<p>查询得到56条数据，其中就出现了一些错误的数据</p>
+<p><img src="/picture/2018-08-16/Snipaste_2018-08-21_13-31-37.png" alt="笛卡尔积"></p>
+<p>所以为了避免出现这种问题，应该加上一个<code>where</code>条件，例如<code>select * from A a,B b where a.deptno = b.deptno;</code>，加上限制条件之后，就能过滤掉一些不应该出现的错误的数据：</p>
+<p><img src="/picture/2018-08-16/Snipaste_2018-08-21_13-22-43.png" alt="多表查询"></p>
+<div class="note warning"><p> <strong>tips</strong><br>上面的查询语句并不能消除笛卡尔积，只是在显示上消除了笛卡尔积的问题，多表查询的性能是非常差的，在开发中尽可能避免使用多表查询。<br> </p></div>
+
+<hr>
+
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><p>所谓子查询就是在一个查询语句中嵌套其他的查询语句。在<code>SQL99（SQL1999）</code>标准中，子查询可以在任意位置插入，例如：SELECT子句、WHERE子句、FROM子句…</p>
+<p><strong>举个栗子：查询每个部门的编号、名称以及部门的人数</strong></p>
+<p>问题拆分：<br>    涉及到的数据表：部门表（部门编号、名称）、员工表（部门人数）<br>    限定的查询条件：EMP.deptno = DEPT.deptno</p>
+<figure class="highlight plain"><figcaption><span>查询方式一：多表查询</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT d.deptno,d.dname,count(e.empno) count</span><br><span class="line">FROM emp e RIGHT JOIN dept d</span><br><span class="line">ON e.deptno = d.deptno</span><br><span class="line">GROUP BY d.deptno,d.dname;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-green"> 查询结果： </span></p>
+<p><img src="/picture/2018-08-16/Snipaste_2018-08-21_16-53-22.png" alt="子查询"></p>
+<figure class="highlight plain"><figcaption><span>查询方式二：子查询</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT d.deptno,d.dname,temp.count</span><br><span class="line">FROM dept d LEFT JOIN (SELECT deptno,COUNT(empno) count FROM emp e GROUP BY deptno) temp</span><br><span class="line">ON d.deptno = temp.deptno;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-green"> 查询结果： </span></p>
+<p><img src="/picture/2018-08-16/Snipaste_2018-08-21_17-14-53.png" alt="子查询"></p>
+<p>可以发现两种查询得到的结果是一样的，但是实际上子查询的性能要比多表查询的性能要好，我们可以假设部门表中有100条记录，员工表中有10000条记录，那么多表查询操作的记录数就是<code>100*10000</code>条，而在子查询中temp表的记录数实际上最多是100条，因为子查询中按照部门编号进行了分组，那么也就意味着子查询操作的记录数实际上是<code>100*100</code>条，显然子查询的性能要比多表查询的性能要好。</p>
+<div class="alert alert-warning"><i class="fa fa-bell"></i> <strong>tips</strong><br>子查询的结果如果存在null值，那么在使用NOT IN操作的时候不会有任何结果返回。<br></div>
+
+<hr>
+
+<h2 id="原生连接Oracle数据库"><a href="#原生连接Oracle数据库" class="headerlink" title="原生连接Oracle数据库"></a>原生连接Oracle数据库</h2><p><strong>操作步骤</strong></p>
+<p>在操作之前我已经在自己的电脑上安装了Oracle数据库，这里以<code>SOCTT</code>用户为例，使用<code>java.sql</code>包下的<code>DriverManager</code>类来获取数据库连接，关于JDBC连接数据库的操作几乎都是固定的，步骤如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、加载数据库驱动程序（向容器加载）；</span><br><span class="line">2、进行数据库连接（通过DriverManager类完成）</span><br><span class="line">3、进行数据的CRUD（增删改查）[Statement、ResultSet、PrepareStatement]</span><br><span class="line">4、关闭连接</span><br></pre></td></tr></table></figure>
+<p><strong>连接形式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数据库的连接地址：jdbc:oracle:连接方式:主机名称:端口名称:数据库的SID</span><br><span class="line">例如：jdbc:oracle:thin:@localhost:1521:mack</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.my.jdbc;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 原生连接Oracle数据库</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>  Mackvord</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>    2018年8月21日</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OracleConnection</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 声明数据库驱动</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DRIVERCLASS = <span class="string">"oracle.jdbc.driver.OracleDriver"</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 声明数据库连接地址</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:oracle:thin:@localhost:1521:mack"</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 声明连接用户</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String USERNAME = <span class="string">"scott"</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 声明连接密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD = <span class="string">"tiger"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取数据库连接的方法 </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> ClassNotFoundException </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> SQLException </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException </span>&#123;</span><br><span class="line">        <span class="comment">// 加载数据库驱动</span></span><br><span class="line">        Class.forName(DRIVERCLASS);</span><br><span class="line">        <span class="comment">// 获取数据库连接并返回</span></span><br><span class="line">        <span class="keyword">return</span> DriverManager.getConnection(URL, USERNAME, PASSWORD);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Connection connection = OracleConnection.getConnection();</span><br><span class="line">            Statement statement = connection.createStatement();</span><br><span class="line">            String sql = <span class="string">"SELECT JOB FROM EMP WHERE ENAME = 'KING'"</span>;</span><br><span class="line">            ResultSet rs = statement.executeQuery(sql);</span><br><span class="line">            <span class="keyword">if</span> (rs.next()) &#123;</span><br><span class="line">                System.out.println(rs.getString(<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            connection.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException | SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="关于连不上Oracle数据库的一些原因及解决办法"><a href="#关于连不上Oracle数据库的一些原因及解决办法" class="headerlink" title="关于连不上Oracle数据库的一些原因及解决办法"></a>关于连不上Oracle数据库的一些原因及解决办法</h2><p>如果发现连不上数据库，先检查数据库相关的服务是否启动，再排查其他的问题：</p>
+<span class="label danger">1、监听服务出错</span>
+<ul>
+<li>检查监听的主机名称是不是本地的计算机名称</li>
+<li>监听配置文件路径：<code>~/product/11.2.0/dbhome_1/NETWORK/ADMIN/</code><ul>
+<li>listener.ora</li>
+<li>tnsnames.ora</li>
+</ul>
+</li>
+</ul>
+<span class="label danger">2、找不到指定的SID</span>
+<ul>
+<li>数据库的名字就是SID的名称，但是很多时候会发现该名字不会被自动注册，就是说只有数据库名称没有对应的SID名称，此时可以打开数据库的网络- 管理工具（Net Manager），重新添加数据库并保存网络配置，那么此时就会自动在listener.ora文件中注册一个SID</li>
+</ul>
+<hr>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果您觉得我的文章对您有帮助，请随意赞赏，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赞赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Mackvord 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Mackvord 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Mackvord
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://mackvord.github.io/database/4240282551.html" title="Oracle基础篇">https://mackvord.github.io/database/4240282551.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Oracle/" <i class="fa fa-tag"></i> Oracle</a>
+          
+            <a href="/tags/查询/" <i class="fa fa-tag"></i> 查询</a>
+          
+            <a href="/tags/过滤/" <i class="fa fa-tag"></i> 过滤</a>
+          
+            <a href="/tags/排序/" <i class="fa fa-tag"></i> 排序</a>
+          
+        </div>
+      
+
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">----- Thank you <i class="fa fa-paw"></i> for reading -----</div>
+    
+</div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mybatis/2249000879.html" rel="prev" title="MyBatis基础篇">
+                <i class="fa fa-chevron-left"></i> MyBatis基础篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/reversion-control/3963543486.html" rel="next" title="SVN">
+                SVN <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/picture/wallhaven-62220.jpg"
+                alt="Mackvord" />
+            
+              <p class="site-author-name" itemprop="name">Mackvord</p>
+              <p class="site-description motion-element" itemprop="description">10000000000</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/mackvord" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mackvord@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/m/playlist?id=2403432736" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://leetcode.com/" target="_blank" title="LeetCode">
+                      
+                        <i class="fa fa-fw fa-code"></i>LeetCode</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-handshake-o"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mackvord.github.io/about/" title="关于此博客" target="_blank">关于此博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="days"></div>
+<script language="javascript">
+	function show_date_time(){
+		window.setTimeout("show_date_time()", 1000);
+		BirthDay=new Date("05/16/2018 10:30:00");
+		today=new Date();
+		timeold=(today.getTime()-BirthDay.getTime());
+		sectimeold=timeold/1000
+		secondsold=Math.floor(sectimeold);
+		msPerDay=24*60*60*1000
+		e_daysold=timeold/msPerDay
+		daysold=Math.floor(e_daysold);
+		e_hrsold=(e_daysold-daysold)*24;
+		hrsold=setzero(Math.floor(e_hrsold));
+		e_minsold=(e_hrsold-hrsold)*60;
+		minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+		seconds=setzero(Math.floor((e_minsold-minsold)*60));
+		document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+	}
+	function setzero(i){
+		if (i<10){
+			i="0" + i
+		};
+		return i;
+	}
+	show_date_time();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle简介"><span class="nav-number">1.</span> <span class="nav-text">Oracle简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle的基本操作"><span class="nav-number">2.</span> <span class="nav-text">Oracle的基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL查询"><span class="nav-number">3.</span> <span class="nav-text">SQL查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询排序"><span class="nav-number">4.</span> <span class="nav-text">查询排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行函数"><span class="nav-number">5.</span> <span class="nav-text">单行函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表查询"><span class="nav-number">6.</span> <span class="nav-text">多表查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多表查询的形式"><span class="nav-number">6.1.</span> <span class="nav-text">多表查询的形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表连接"><span class="nav-number">6.2.</span> <span class="nav-text">表连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笛卡尔积"><span class="nav-number">6.3.</span> <span class="nav-text">笛卡尔积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子查询"><span class="nav-number">7.</span> <span class="nav-text">子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生连接Oracle数据库"><span class="nav-number">8.</span> <span class="nav-text">原生连接Oracle数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于连不上Oracle数据库的一些原因及解决办法"><span class="nav-number">9.</span> <span class="nav-text">关于连不上Oracle数据库的一些原因及解决办法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mackvord</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-line-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">58.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered By <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and NexT</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'yuJoRwSW8MCeTjCnPr0CKYxk-9Nh9j0Va',
+        appKey: 'KKOXM0H6WnWcFSUlJ31pg3yq',
+        placeholder: '欢迎留言、交流',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

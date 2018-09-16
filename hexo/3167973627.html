@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mackvord-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mackvord-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,搭建,配置与优化," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="&amp;ensp;">
+<meta name="keywords" content="Hexo,搭建,配置与优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+NexT+Github Pages">
+<meta property="og:url" content="https://mackvord.github.io/hexo/3167973627.html">
+<meta property="og:site_name" content="Mackvord&#39;s Blogs">
+<meta property="og:description" content="&amp;ensp;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-05-17/Snipaste_2018-05-20_10-45-52.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-05-17/20180915180208.png">
+<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png?v8">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-05-17/Snipaste_2018-05-19_00-48-50.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-05-17/Snipaste_2018-05-19_00-50-15.png">
+<meta property="og:image" content="https://mackvord.github.io/picture/2018-05-17/wallhaven-165463.jpg">
+<meta property="og:updated_time" content="2018-09-16T07:35:38.781Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+NexT+Github Pages">
+<meta name="twitter:description" content="&amp;ensp;">
+<meta name="twitter:image" content="https://mackvord.github.io/picture/2018-05-17/Snipaste_2018-05-20_10-45-52.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mackvord.github.io/hexo/3167973627.html"/>
+
+
+
+
+
+  <title>Hexo+NexT+Github Pages | Mackvord's Blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/mackvord" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mackvord's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">1.00110000101111e+24</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-documents">
+          <a href="/documents" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-movie">
+          <a href="/movie/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-film"></i> <br />
+            
+            电影
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+<link href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<link href="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.js"></script>
+<script src="/js/src/sitemap.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mackvord.github.io/hexo/3167973627.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mackvord">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/wallhaven-62220.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mackvord's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo+NexT+Github Pages</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T16:36:17+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-16T15:35:38+08:00">
+                2018-09-16
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/hexo/3167973627.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/hexo/3167973627.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  9.9k
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&ensp;<br><a id="more"></a></p>
+<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>经过几天时间的折腾，终于搭建好了第一个个人博客站点，整个站点基于HEXO+Github Pages搭建，使用了NexT主题。已完成部分优化，后续会继续更新！</p>
+<hr>
+
+<h3 id="优化配置"><a href="#优化配置" class="headerlink" title="优化配置"></a>优化配置</h3><h4 id="侧栏新建页面"><a href="#侧栏新建页面" class="headerlink" title="侧栏新建页面"></a>侧栏新建页面</h4><p>以新建文档页面为例，新建分类、标签等页面与之类似，具体的操作如下：</p>
+<figure class="highlight plain"><figcaption><span>新建documents页面</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your site path</span><br><span class="line">hexo new page &quot;documents&quot;</span><br></pre></td></tr></table></figure>
+<p>1、在主题配置文件中搜索<code>menu</code>，新增: documents: /documents || file<br>2、修改~/themes/next/languages目录下的zh_Hans.yml文件，同样搜索<code>menu</code>，新增 documents: 文档<br>3、修改~/source/documents目录下的<code>index.md</code>文件，在文件头部添加<code>type: &quot;documents&quot;</code>和 <code>comments: false</code></p>
+<hr>
+
+<h4 id="PDF预览"><a href="#PDF预览" class="headerlink" title="PDF预览"></a>PDF预览</h4><p>安装PDF插件，插件的地址: <a href="https://github.com/superalsrk/hexo-pdf/" target="_blank" rel="noopener">https://github.com/superalsrk/hexo-pdf/</a></p>
+<figure class="highlight plain"><figcaption><span>插件安装</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd your site path</span><br><span class="line">hexo install hexo-pdf --save</span><br><span class="line">语法:&#123;% pdf url地址 %&#125;</span><br><span class="line">例如:&#123;% pdf http://www.example.com/demo.pdf %&#125;</span><br><span class="line">其他用法，请参考github</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="摘要图片"><a href="#摘要图片" class="headerlink" title="摘要图片"></a>摘要图片</h4><p>简单来说就是将文章中的某一张图片作为摘要图片显示在摘要文字的后面，并且不会重复显示。文章摘要(excerpt)指的是每篇文章在首页显示的那部分内容，当然前提是我们自己设置了摘要内容。那么到底怎么做？首先要确保关闭自动摘要，也就是主题配置文件(<code>~/themes/next/_config.yml</code>)中的配置（默认情况下是关闭的）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">excerpt_description: <span class="literal">false</span></span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: <span class="literal">false</span></span><br><span class="line">  length: <span class="number">150</span></span><br></pre></td></tr></table></figure>
+<p>然后修改<code>~/themes/next/layout/_macro/</code>下的<code>post.swig</code>文件:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> is_index %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> post.description and theme.excerpt_description %&#125;</span><br><span class="line">    &#123;&#123; post.description &#125;&#125;</span><br><span class="line">    &lt;!--noindex--&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"post-button text-center"</span>&gt;</span><br><span class="line">      &lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">"btn"</span> href=<span class="string">"&#123;&#123; url_for(post.path) &#125;&#125;"</span>&gt;</span><br><span class="line">        &#123;&#123; __(<span class="string">'post.read_more'</span>) &#125;&#125; &amp;raquo;</span><br><span class="line">      &lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    &lt;!--<span class="regexp">/noindex--&gt;</span></span><br><span class="line"><span class="regexp">  &#123;% elif post.excerpt %&#125;</span></span><br><span class="line"><span class="regexp">    &#123;&#123; post.excerpt &#125;&#125;</span></span><br><span class="line"><span class="regexp">         </span></span><br><span class="line"><span class="regexp">  &lt;!--下面是添加的代码--&gt;</span></span><br><span class="line"><span class="regexp">  &#123;% if post.image %&#125;</span></span><br><span class="line"><span class="regexp">    &lt;div class="out-img-topic"&gt;</span></span><br><span class="line"><span class="regexp">      &lt;img src=&#123;&#123; post.image &#125;&#125; class="img-topic" /</span>&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &#123;% endif %&#125;</span></span><br><span class="line"><span class="regexp">  &lt;!--上面是添加的代码--&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;!--noindex--&gt;</span></span><br><span class="line"><span class="regexp">  &lt;div class="post-button text-center"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;a class="btn" href="&#123;&#123; url_for(post.path) &#125;&#125;&#123;% if theme.scroll_to_more %&#125;#&#123;&#123; __('post.more') &#125;&#125;&#123;% endif %&#125;" rel="contents"&gt;</span></span><br><span class="line"><span class="regexp">      &#123;&#123; __('post.read_more') &#125;&#125; &amp;raquo;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>a&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;!--/</span>noindex--&gt;</span><br></pre></td></tr></table></figure>
+<p>如果需要自定义样式，可以在<code>~/themes/next/source/css/_custom/custom.styl</code>中的custom.styl添加下面的代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 去掉图片边框</span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-class">.fancybox</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line">// 图片外部的容器方框 </span><br><span class="line"><span class="selector-class">.out-img-topic</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">max-height</span>:<span class="number">424px</span>;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line">// 图片</span><br><span class="line"><span class="selector-tag">img</span><span class="selector-class">.img-topic</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block ;</span><br><span class="line">  <span class="attribute">margin-left</span>: .<span class="number">7em</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: .<span class="number">7em</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">clear</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，如果某一篇文章需要添加摘要图片，那么在文章的 front-matter 中添加<code>image: url</code>即可,<code>url</code>就是图片所在的路径或者链接地址。</p>
+<p><span id="inline-blue">摘要样式:</span></p>
+<p>默认情况下，文章的摘要样式不太好看，字体有点大，我想将其设置得小一点，并且是斜体的，使用谷歌浏览器调试了一下，效果还不错，但是由于摘要文字被渲染完之后是使用<code>&lt;p&gt;</code>标签括住的，本来想在自定义配置文件<code>custom.yml</code>中，重新定义文章内的<code>&lt;p&gt;</code>标签，但是，部署到本地服务器的时候，发现文章内所有的文字效果都变了(~emmmm…)，后来想了一下，既然自定义<code>&lt;p&gt;</code>标签不行，那干脆定义一个选择器<code>.description</code>，但是使用一对标签<code>&lt;p class=&quot;description&quot;&gt;这里是摘要文字&lt;/p&gt;</code>将摘要括起来，然后在文章中使用<code>&lt;!--more--&gt;</code>截取文章摘要，发现有效果了。</p>
+<p><span id="inline-blue">样式:</span></p>
+<figure class="highlight css"><figcaption><span>配置文件：-\themes\next\source\css\_custom\custom.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 文章内摘要样式(主要是用来设置摘要样式)</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-class">.description</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">text-align</span>:center;</span><br><span class="line">    <span class="attribute">font-style</span>: italic;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="首页文章篇数"><a href="#首页文章篇数" class="headerlink" title="首页文章篇数"></a>首页文章篇数</h4><p>首先安装插件，在<code>git</code>中输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install  hexo-generator-index --save</span><br><span class="line">npm install  hexo-generator-archive  --save</span><br><span class="line">npm install  hexo-generator-tag --save</span><br></pre></td></tr></table></figure>
+<p>安装完插件，在站点配置文件中添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  per_page: <span class="number">5</span></span><br><span class="line"></span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: <span class="number">10</span></span><br><span class="line">  yearly: <span class="literal">true</span>	<span class="comment">// 这里可不写</span></span><br><span class="line">  monthly: <span class="literal">true</span>	<span class="comment">// 这里可不写</span></span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中<code>per_page</code>表示的是文章的篇数，<code>index</code>：首页、<code>archive</code>：归档、<code>tag</code>：标签</p>
+</blockquote>
+<hr>
+
+<h4 id="首页文章分割线"><a href="#首页文章分割线" class="headerlink" title="首页文章分割线"></a>首页文章分割线</h4><p>做法很简单，在<code>~/themes/next/source/css/_custom/</code>目录下的<code>custom.styl</code>文件中添加下面的代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.posts-expand</span> &#123;</span><br><span class="line">  .post-eof &#123;</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">block</span>;</span><br><span class="line">    margin: $post-eof-margin-top auto $post-eof-margin-bottom;</span><br><span class="line">    <span class="selector-tag">width</span>: 100%;</span><br><span class="line">    <span class="selector-tag">height</span>: 3<span class="selector-tag">px</span>;</span><br><span class="line">    background: $grey-light;</span><br><span class="line">    <span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>设置完成后重新构建(hexo g)和部署(hexo d)，刷新页面即可看到效果</p>
+<hr>
+
+<h4 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h4><p>现如今，越来越多的平台支持打赏功能，知识付费的时代正在到来，而HEXO也集成了这个功能，如果要开启这个功能，只需要修改<span color="#D1EEEE">主题配置文件</span>，添加微信或者支付宝收款二维码图片的地址即可，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reward_comment: 一段文字描述！</span><br><span class="line">wechatpay: /path/to/wechat-reward-image	// 微信收款二维码图片地址</span><br><span class="line">alipay: /path/to/alipay-reward-image  // 支付宝收款二维码图片地址</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="禁用打赏文字抖动"><a href="#禁用打赏文字抖动" class="headerlink" title="禁用打赏文字抖动"></a>禁用打赏文字抖动</h4><p>具体的做法就是注释掉文字抖动函数，文件路径：<code>~/themes/next/source/css/_common/components/post/post-reward.styl</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">## 注释打赏文字抖动函数，将下面代码注释掉</span><br><span class="line"><span class="selector-id">#wechat</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#alipay</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">    <span class="attribute">-moz-animation</span>: roll <span class="number">0.1s</span> infinite linear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="页面宽度"><a href="#页面宽度" class="headerlink" title="页面宽度"></a>页面宽度</h4><p>默认情况下，next主题两边留白比较多，如果是文章中主要是文字的话，可能影响不大，但是在写技术文章的时候，可能会贴入较多的代码进行讲解，这个时候阅读代码会变得不方便。对于Pisces Scheme，需要同时修改<code>header</code>的宽度、<code>.main-inner</code> 的宽度以及<code>.content-wrap</code>的宽度。例如，使用百分比（Pisces 的布局定义在<code>source\css\_schemes\Picses\_layout.styl</code>中）：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span>&#123; <span class="attribute">width</span>: <span class="number">80%</span>; &#125;</span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.main-inner</span> &#123; <span class="attribute">width</span>: <span class="number">80%</span>; &#125;</span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123; <span class="attribute">width</span>: <span class="built_in">calc</span>(100% - 260px); &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="上一篇，下一篇顺序"><a href="#上一篇，下一篇顺序" class="headerlink" title="上一篇，下一篇顺序"></a>上一篇，下一篇顺序</h4><p>默认情况下，文章底部的文章切换按钮(<code>&lt;</code>和<code>&gt;</code>)，其切换效果是反过来的，也就是当我们点击<code>xxx &gt;</code>的时候实际上是跳转到上一篇文章而不是我们所想的下一篇文章，所以对其进行修改：</p>
+<figure class="highlight diff"><figcaption><span>文件路径:-\themes\next\layout\_macro\post.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if not is_index and (post.prev or post.next) %&#125;</span><br><span class="line">        &lt;div class="post-nav"&gt;</span><br><span class="line">          &lt;div class="post-nav-next post-nav-item"&gt;</span><br><span class="line"><span class="deletion">-           &#123;% if post.next %&#125;</span></span><br><span class="line"><span class="addition">+           &#123;% if post.prev %&#125;</span></span><br><span class="line"><span class="deletion">-             &lt;a href="&#123;&#123; url_for(post.next.path) &#125;&#125;" rel="next" title="&#123;&#123; post.next.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;a href="&#123;&#123; url_for(post.prev.path) &#125;&#125;" rel="prev" title="&#123;&#123; post.prev.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="deletion">-               &lt;i class="fa fa-chevron-left"&gt;&lt;/i&gt; &#123;&#123; post.next.title &#125;&#125;</span></span><br><span class="line"><span class="addition">+               &lt;i class="fa fa-chevron-left"&gt;&lt;/i&gt; &#123;&#123; post.prev.title &#125;&#125;</span></span><br><span class="line">              &lt;/a&gt;</span><br><span class="line">            &#123;% endif %&#125;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">          &lt;span class="post-nav-divider"&gt;&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">          &lt;div class="post-nav-prev post-nav-item"&gt;</span><br><span class="line"><span class="deletion">-           &#123;% if post.prev %&#125;</span></span><br><span class="line"><span class="addition">+           &#123;% if post.next %&#125;</span></span><br><span class="line"><span class="deletion">-             &lt;a href="&#123;&#123; url_for(post.prev.path) &#125;&#125;" rel="prev" title="&#123;&#123; post.prev.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;a href="&#123;&#123; url_for(post.next.path) &#125;&#125;" rel="next" title="&#123;&#123; post.next.title &#125;&#125;"&gt;</span></span><br><span class="line"><span class="deletion">-               &#123;&#123; post.prev.title &#125;&#125; &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="addition">+               &#123;&#123; post.next.title &#125;&#125; &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;</span></span><br><span class="line">              &lt;/a&gt;</span><br><span class="line">            &#123;% endif %&#125;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="标题栏信息调整"><a href="#标题栏信息调整" class="headerlink" title="标题栏信息调整"></a>标题栏信息调整</h4><p>关于标题栏底下的信息，包括阅读时长，字数统计，评论数等，如果要修改字段的显示文字，例如将<code>阅读时长</code>改为<code>热度</code>,可以修改<code>~/themes/next/languages/</code>下的zh-Hans.yml文件，把相应的字段改为自己想要显示的文字即可。NexT本身集成了字数统计功能，只需要修改主题配置文件即可：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line">  item_text: <span class="literal">true</span></span><br><span class="line">  wordcount: <span class="literal">true</span> <span class="comment">// 字数统计功能</span></span><br><span class="line">  min2read: <span class="literal">false</span> <span class="comment">// 阅读时长功能</span></span><br><span class="line">  totalcount: <span class="literal">false</span></span><br><span class="line">  separated_meta: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>评论数的设置需要用到<code>LeanCloud</code>,具体的配置网上也有很多教程，这里就不贴出来了，传送门：<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>,这里主要讲一下如何调整字数统计换行显示的问题，如果没有做修改，字数统计会换行显示，那么如何让其显示在一行上？很简单，只需要修改<code>post.swig</code>文件，文件路径：<code>~/themes/next/layout/_macro/post.swig</code>，<code>+</code>号表示添加的内容，<code>-</code>号表示删除的内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125;</span><br><span class="line">            &lt;!--下面为添加的一句代码--&gt;</span><br><span class="line"> +          &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;</span><br><span class="line"> -          &lt;div class="post-wordcount"&gt;</span><br><span class="line"> +          &lt;span class="post-wordcount"&gt;</span><br><span class="line">              &#123;% if theme.post_wordcount.wordcount %&#125;</span><br><span class="line">                &#123;% if not theme.post_wordcount.separated_meta %&#125;</span><br><span class="line">                  &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;</span><br><span class="line">                &#123;% endif %&#125;</span><br><span class="line">                &lt;span class="post-meta-item-icon"&gt;</span><br><span class="line">                  &lt;i class="fa fa-file-word-o"&gt;&lt;/i&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">                &#123;% if theme.post_wordcount.item_text %&#125;</span><br><span class="line">                  &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.wordcount') &#125;&#125;&amp;#58;&lt;/span&gt;</span><br><span class="line">                &#123;% endif %&#125;</span><br><span class="line">                &lt;span title="&#123;&#123; __('post.wordcount') &#125;&#125;"&gt;</span><br><span class="line">                  &#123;&#123; wordcount(post.content) &#125;&#125; 字</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">              &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">              &#123;% if theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125;</span><br><span class="line">                &lt;span class="post-meta-divider"&gt;|&lt;/span&gt;</span><br><span class="line">              &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">              &#123;% if theme.post_wordcount.min2read %&#125;</span><br><span class="line">                &lt;span class="post-meta-item-icon"&gt;</span><br><span class="line">                  &lt;i class="fa fa-clock-o"&gt;&lt;/i&gt;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">                &#123;% if theme.post_wordcount.item_text %&#125;</span><br><span class="line">                  &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.min2read') &#125;&#125; &amp;asymp;&lt;/span&gt;</span><br><span class="line">                &#123;% endif %&#125;</span><br><span class="line">                &lt;span title="&#123;&#123; __('post.min2read') &#125;&#125;"&gt;</span><br><span class="line">                  &#123;&#123; min2read(post.content) &#125;&#125;</span><br><span class="line">                &lt;/span&gt;</span><br><span class="line">              &#123;% endif %&#125;</span><br><span class="line">            &lt;!--下面的/span原来是/div--&gt;</span><br><span class="line"> -          &lt;/div&gt;</span><br><span class="line"> +          &lt;/span&gt;</span><br><span class="line">          &#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line"> +        &lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h4><p>要控制文章置顶，可以通过设定一个top值来实现，具体的做法就是修改<code>hero-generator-index</code>插件中的generator.js文件的排序函数，文件所在路径：<code>~/node_modules/hexo-generator-index/lib/generator.js</code></p>
+<p><img src="/picture/2018-05-17/Snipaste_2018-05-20_10-45-52.png" alt="generator.js"></p>
+<p>修改后的代码：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">'use strict';</span><br><span class="line"></span><br><span class="line">var pagination = require('hexo-pagination');</span><br><span class="line"></span><br><span class="line">module.exports = function(locals) &#123;</span><br><span class="line">  var config = this.config;</span><br><span class="line"><span class="deletion">- var posts = locals.posts.sort(config.index_generator.order_by);  ## 注释掉这一句，添加下面的代码</span></span><br><span class="line"><span class="addition">+ var posts = locals.posts;</span></span><br><span class="line"><span class="addition">+  posts.data = posts.data.sort(function(a, b) &#123;</span></span><br><span class="line"><span class="addition">+    if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span></span><br><span class="line"><span class="addition">+      if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span></span><br><span class="line"><span class="addition">+        else return b.top - a.top; // 否则按照top值降序排</span></span><br><span class="line"><span class="addition">+    &#125; else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line"><span class="addition">+        return -1;</span></span><br><span class="line"><span class="addition">+    &#125; else if(!a.top &amp;&amp; b.top) &#123;</span></span><br><span class="line"><span class="addition">+        return 1;</span></span><br><span class="line"><span class="addition">+    &#125;</span></span><br><span class="line"><span class="addition">+      else return b.date - a.date; // 都没定义按照文章日期降序排</span></span><br><span class="line"><span class="addition">+    &#125;);</span></span><br><span class="line">  var paginationDir = config.pagination_dir || 'page';</span><br><span class="line"><span class="addition">+ var path = config.index_generator.path || '';  ## 注意这里，网上有一些教程里面缺了这一句代码</span></span><br><span class="line"></span><br><span class="line">  return pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: ['index', 'archive'],</span><br><span class="line">    format: paginationDir + '/%d/',</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>修改完成后，如果需要将文章置顶，则在文章的<code>front-matter</code>中添加top字段，top值越大越靠前，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: HEXO+NexT+Github Pages</span><br><span class="line">date: <span class="number">2018</span><span class="number">-05</span><span class="number">-17</span> <span class="number">16</span>:<span class="number">36</span>:<span class="number">17</span></span><br><span class="line">tags: </span><br><span class="line">  - HEXO</span><br><span class="line">  - 搭建</span><br><span class="line">  - 配置与优化</span><br><span class="line">categories:</span><br><span class="line">  - HEXO</span><br><span class="line">copyright: <span class="literal">true</span></span><br><span class="line">image: </span><br><span class="line">top: <span class="number">50</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h4 id="透明度设置"><a href="#透明度设置" class="headerlink" title="透明度设置"></a>透明度设置</h4><p><span id="inline-blue">修改内容模块和菜单栏的透明度</span><br>文件路径：<code>~/themes/next/source/css/_schemes/Pisces/_layout.styl</code>，将<code>.header-inner</code>和<code>.content-wrap</code>下的<code>background: white</code>以及<code>.sidebar</code>下的<code>background: $body-bg-color</code>改为<code>background: rgba(255,255,255,0.6);</code>其中0.6表示的是透明度，可以根据自己的需要设置(范围：0~1)。</p>
+<p><span id="inline-yellow">站点概况模块透明度</span><br>文件路径：<code>~/themes/next/source/css/_schemes/Pisces/_sidebar.styl</code>,将<code>.sidebar-inner</code>下的<code>background: white</code>改为<code>background: rgba(255,255,255,0.6);</code></p>
+<hr>
+
+<h4 id="导航头背景图"><a href="#导航头背景图" class="headerlink" title="导航头背景图"></a>导航头背景图</h4><p>只需要将原来的黑色背景换成背景图即可，即：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 设置左上角站点背景</span><br><span class="line"><span class="selector-class">.site-meta</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"/picture/background/Flowing_Ribbon.jpg"</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="博文压缩"><a href="#博文压缩" class="headerlink" title="博文压缩"></a>博文压缩</h4><p>安装<code>gulp</code>插件，在命令行中使用如下命令安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g gulp</span><br><span class="line">npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save</span><br></pre></td></tr></table></figure>
+<p>如果安装过程中出现了类似下面的警告信息，意思是说有些插件已经弃用了，或者改名了，又或者有更新了，跳过即可，当然，你也可以根据提示选择安装或者更新这些插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gulp-minify-css gulp-uglify gulp-htmlclean gulp-htmlmin gulp --save</span><br><span class="line">npm WARN deprecated gulp-minify-css@1.2.4: Please use gulp-clean-css</span><br><span class="line">npm WARN deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5</span><br><span class="line">npm WARN deprecated graceful-fs@3.0.11: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js</span><br><span class="line">npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue</span><br><span class="line">npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue</span><br><span class="line">npm WARN deprecated graceful-fs@1.2.3: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js</span><br><span class="line">npm WARN notice [SECURITY] minimatch has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=minimatch&amp;version=0.2.14 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.</span><br><span class="line">npm WARN notice [SECURITY] minimatch has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=minimatch&amp;version=2.0.10 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.</span><br><span class="line">npm WARN notice [SECURITY] lodash has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=lodash&amp;version=1.0.2 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line"></span><br><span class="line">+ gulp-htmlmin@4.0.0</span><br><span class="line">+ gulp-htmlclean@2.7.22</span><br><span class="line">+ gulp-uglify@3.0.0</span><br><span class="line">+ gulp-minify-css@1.2.4</span><br><span class="line">+ gulp@3.9.1</span><br><span class="line">added 289 packages in 53.036s</span><br></pre></td></tr></table></figure>
+<p>安装完成后，可以在命令行或者shell中输入<code>gulp -v</code>测试一下是否有问题，如果提示没有此命令，那么可能是环境变量没有配置好，Windows系统需要在高级系统属性中配置一些环境变量，由于我用的是Linux，所以我需要在shell中建立软连接:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /opt/node-v8.11.4-linux-x64/bin/gulp /usr/local/bin/gulp</span><br><span class="line">/opt/node-v8.11.4-linux-x64/bin/gulp : 指的是gulp的安装位置</span><br><span class="line">/usr/local/bin/gulp ：本地用户存放脚本的位置</span><br></pre></td></tr></table></figure>
+<p>除了安装<code>gulp</code>相关的插件外，我们还需要安装另外几个插件，主要是为了解决ES6兼容性的问题:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp-babel babel-preset-es2015  --save</span><br><span class="line">npm install babel-core --save</span><br></pre></td></tr></table></figure>
+<p>安装完成后在站点目录下新建一个<code>.babelrc</code>文件，注意是有一个点的，文件的内容如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;presets&quot;: [&quot;es2015&quot; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完了之后在站点跟目录下新建一个<code>gulpfile.js</code>文件，在文件中输入一下代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">'gulp-babel'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩 public 目录 css</span></span><br><span class="line">gulp.task(<span class="string">'minify-css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.css'</span>)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public 目录 html</span></span><br><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">    .pipe(htmlclean())</span><br><span class="line">    .pipe(htmlmin(&#123;</span><br><span class="line">         removeComments: <span class="literal">true</span>,</span><br><span class="line">         minifyJS: <span class="literal">true</span>,</span><br><span class="line">         minifyCSS: <span class="literal">true</span>,</span><br><span class="line">         minifyURLs: <span class="literal">true</span>,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public/js 目录 js</span></span><br><span class="line">gulp.task(<span class="string">'minify-js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.js'</span>)</span><br><span class="line">         <span class="comment">// ES5检查</span></span><br><span class="line">        .pipe(babel())</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 执行 gulp 命令时执行的任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [</span><br><span class="line">    <span class="string">'minify-html'</span>,<span class="string">'minify-css'</span>,<span class="string">'minify-js'</span></span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p>保存退出后便可以执行<code>hexo clean</code>、<code>hexo g</code>、<code>gulp</code>、<code>hexo s</code>命令查看效果。</p>
+<p><img src="/picture/2018-05-17/20180915180208.png" alt="gulp"></p>
+<h4 id="文章顶部加载条"><a href="#文章顶部加载条" class="headerlink" title="文章顶部加载条"></a>文章顶部加载条</h4><p>最新版的Next自带了加载条效果，只需要在主题配置文件中开启即可:</p>
+<figure class="highlight js"><figcaption><span>配置文件:-\themes\next\config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: <span class="literal">true</span></span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
+<h4 id="点击爱心效果"><a href="#点击爱心效果" class="headerlink" title="点击爱心效果"></a>点击爱心效果</h4><h5 id="创建JS文件"><a href="#创建JS文件" class="headerlink" title="创建JS文件"></a>创建JS文件</h5><p>在<code>~\themes\next\source\js\src</code>目录下创建一个新的<code>JS</code>文件，名字自己起，例如我的是<code>myclicklove.js</code>，然后在<code>JS</code>文件中添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()</span><br><span class="line">    &#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)</span><br><span class="line">        d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>))</span><br><span class="line">            :(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span></span><br><span class="line">            +d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span></span><br><span class="line">            +d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);</span><br><span class="line">        requestAnimationFrame(r)</span><br><span class="line">    &#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;</span><br><span class="line">        e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            t&amp;&amp;t(),i(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);</span><br><span class="line">        a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)</span><br><span class="line">    &#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;</span><br><span class="line">        <span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;</span><br><span class="line">        <span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;</span><br><span class="line">        t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)</span><br><span class="line">    &#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span></span><br><span class="line">    &#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;(),n()</span><br><span class="line">&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="修改-layout-swig文件"><a href="#修改-layout-swig文件" class="headerlink" title="修改_layout.swig文件"></a>修改_layout.swig文件</h5><p>修改<code>~\themes\next\layout\_layout.swig</code>文件，在文件末尾添加一下代码即可：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/这里是你的js文件名.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>修改完成后重新渲染，部署即可看到效果。</p>
+<hr>
+
+<h4 id="标签云颜色"><a href="#标签云颜色" class="headerlink" title="标签云颜色"></a>标签云颜色</h4><p>注意这里只是修改了原来标签云的颜色，如果想要其他的标签云效果，可以尝试安装插件<a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">hexo-tag-cloud</a></p>
+<figure class="highlight plain"><figcaption><span>-/themes/next/layout/page.swig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; tagcloud(&#123;min_font: 13, max_font: 30, amount: 1000, color: true, start_color: &apos;#ff4b1f&apos;, end_color: &apos;#1fddff&apos;&#125;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>关于参数，可以参考<a href="https://hexo.io/zh-cn/docs/helpers.html#tagcloud" target="_blank" rel="noopener">hexo官方文档</a></p>
+<hr>
+
+<h4 id="添加emoji表情"><a href="#添加emoji表情" class="headerlink" title="添加emoji表情"></a>添加emoji表情</h4><p>安装插件：<code>hexo-filter-github-emojis</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-filter-github-emojis --save</span><br></pre></td></tr></table></figure>
+<p>在站点配置文件中进行配置：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">githubEmojis:</span><br><span class="line">  enable: true</span><br><span class="line"><span class="deletion">- className: github-emoji</span></span><br><span class="line"><span class="addition">+ idName: github-emoji</span></span><br><span class="line">  unicode: false</span><br><span class="line">  styles:</span><br><span class="line">  localEmojis:</span><br></pre></td></tr></table></figure>
+<p>插件提供了两种渲染方式：</p>
+<figure class="highlight html"><figcaption><span>方式1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"' + options.className + '"</span> ' +</span></span><br><span class="line"><span class="tag">        <span class="attr">styles</span> +</span></span><br><span class="line"><span class="tag">        ' <span class="attr">title</span>=<span class="string">"' + emojiName +</span></span></span><br><span class="line"><span class="tag"><span class="string">        '"</span> <span class="attr">data-src</span>=<span class="string">"' + emojis[emojiName].src +</span></span></span><br><span class="line"><span class="tag"><span class="string">        '"</span>&gt;</span>' + codepoints + '<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>方式2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"' + options.className + '"</span> ' +</span></span><br><span class="line"><span class="tag">        <span class="attr">styles</span> +</span></span><br><span class="line"><span class="tag">        ' <span class="attr">title</span>=<span class="string">"' + emojiName + '"</span> <span class="attr">alt</span>=<span class="string">"' + emojiName + '"</span> <span class="attr">src</span>=<span class="string">"' +</span></span></span><br><span class="line"><span class="tag"><span class="string">        emojis[emojiName].src + '"</span> <span class="attr">height</span>=<span class="string">"20"</span> <span class="attr">width</span>=<span class="string">"20"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中方式一是使用<code>unicode</code>插入<code>emoji</code>表情时的渲染方式，默认不开启；方式2是默认的渲染方式，即最终的表情会以图片的形式嵌入文章中，但是这样会有一个问题就是，hexo的图片弹出层插件<code>fancybox</code>会对<code>emoji</code>表情产生影响，因此，需要对插件做一些调整，首先是修改<code>js</code>，替换所有<code>className</code>为<code>idName</code>，实际上只有3个className，不用担心替换错，之后删除<code>title属性</code>。</p>
+<figure class="highlight diff"><figcaption><span>路径: -\node_modules\hexo-filter-github-emojis\index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var codepoints = emojis[emojiName].codepoints</span><br><span class="line">    if (options.unicode &amp;&amp; codepoints) &#123;</span><br><span class="line">      codepoints = codepoints.map(function (code) &#123;</span><br><span class="line">        return '&amp;#x' + code + ';'</span><br><span class="line">      &#125;).join('')</span><br><span class="line"></span><br><span class="line">      return '&lt;span class="' + options.className + '" ' +</span><br><span class="line">        styles +</span><br><span class="line"><span class="deletion">-       ' title="' + emojiName +</span></span><br><span class="line"><span class="deletion">-       '" data-src="' + emojis[emojiName].src +</span></span><br><span class="line"><span class="addition">+       ' data-src="' + emojis[emojiName].src +</span></span><br><span class="line">        '"&gt;' + codepoints + '&lt;/span&gt;'</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return '&lt;img class="' + options.className + '" ' +</span><br><span class="line">        styles +</span><br><span class="line"><span class="deletion">-       ' title="' + emojiName + '" alt="' + emojiName + '" src="' +</span></span><br><span class="line"><span class="addition">+       ' alt="' + emojiName + '" src="' +</span></span><br><span class="line">        emojis[emojiName].src + '" height="20" width="20" /&gt;'</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>注意上面的<code>data-src=</code>以及<code>alt=</code>前面是没有双引号的，只有单引号。上面的修改主要是去掉了表情图片下面的<code>title</code>，除此之外，还需要修改表情的样式，受<code>fancybox</code>的影响，嵌入的表情会换行居中显示，这显然不是我们想要的效果，我们要修改表情的样式，让其显示在文字的后面：</p>
+<figure class="highlight css"><figcaption><span>路径：-\themes\next\source\css\_custom\custom.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 自定义emoji样式</span><br><span class="line"><span class="selector-class">.posts-expand</span> <span class="selector-class">.post-body</span> <span class="selector-tag">img</span><span class="selector-class">.github-emoji</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: text-bottom;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">cursor</span>: text;</span><br><span class="line">    <span class="attribute">box-shadow</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经过上面的修改，表情包已经可以在文字的后面显示了，但这还不够，因为当我们点击表情包的时候，依旧会受到fancybox的影响，像图片一样弹出，我希望的效果是即使我点击表情包，它也不会像其他图片一样弹出来，所以，我们要进一步修改，找到<code>~/themes/next/source/js/src/utils.js</code>，添加一行代码:</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">wrapImageWithFancyBox: function () &#123;</span><br><span class="line">    $('.content img')</span><br><span class="line">      .not('[hidden]')</span><br><span class="line">      .not('.group-picture img, .post-gallery img')</span><br><span class="line">      .each(function () &#123;</span><br><span class="line">        var $image = $(this);</span><br><span class="line">        // 禁用emoji表情包的fancybox效果</span><br><span class="line"><span class="addition">+       if ($(this).hasClass('github-emoji')) return;</span></span><br><span class="line">        var imageTitle = $image.attr('title');</span><br><span class="line">        var $imageWrapLink = $image.parent('a');</span><br><span class="line"></span><br><span class="line">        if ($imageWrapLink.size() &lt; 1) &#123;</span><br><span class="line">          var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');</span><br><span class="line">          $imageWrapLink = $image.wrap('&lt;a href="' + imageLink + '"&gt;&lt;/a&gt;').parent('a');</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $imageWrapLink.addClass('fancybox fancybox.image');</span><br><span class="line">        $imageWrapLink.attr('rel', 'group');</span><br><span class="line"></span><br><span class="line">        if (imageTitle) &#123;</span><br><span class="line">          $imageWrapLink.append('&lt;p class="image-caption"&gt;' + imageTitle + '&lt;/p&gt;');</span><br><span class="line"></span><br><span class="line">          //make sure img title tag will show correctly in fancybox</span><br><span class="line">          $imageWrapLink.attr('title', imageTitle);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
+<p><span style="color: red">注:代码的意思就是所有带有<code>github-emoji</code>类选择器的img标签都禁用fancybox效果</span></p>
+<p>到这里，如果文章中的超链接设置了鼠标移进去显示下划线的话，那么这里的表情图片也会有这种效果，所以还要去掉表情包的下划线，但是有个问题就是：表情包的下划线是没了，但是站点内其他链接的样式都被影响了，没办法，为了<code>emoji</code>只能修改了<img class="github-emoji" alt="joy" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png?v8" height="20" width="20"></p>
+<figure class="highlight css"><figcaption><span>路径：-\themes\next\source\css\_custom\custom.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">// 导航头超链接样式</span><br><span class="line"><span class="selector-class">.header-inner</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(80, 115, 184);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.header-inner</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(161, 102, 171);</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="built_in">rgb</span>(161, 102, 171);</span><br><span class="line">&#125;</span><br><span class="line">// 导航头站点元数据超链接样式</span><br><span class="line"><span class="selector-class">.site-meta</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(233, 233, 233);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.site-meta</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(233, 233, 233);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">// 首页超链接样式</span><br><span class="line"><span class="selector-class">.content-wrap</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(80, 115, 184);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-wrap</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(161, 102, 171);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">// 文章内超链接样式</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(80, 115, 184);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-body</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(161, 102, 171);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">// 首页标题超链接样式</span><br><span class="line"><span class="selector-class">.post-title</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(85, 85, 85);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>剩下的最重要的一点就是表情包网站，要使用表情包可以到这个网站拷贝：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com</a>，使用的方法也很简单：</p>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i> <strong>语法</strong><br>&#123;% github_emoji 表情包名字 %&#125;<br># 拷贝到的表情包去掉左右的冒号即为表情包的名字<br># For example:<br>&#123;% github_emoji sparkles %&#125;<br></div>
+
+<p>更多的使用的方法可以参考<a href="https://github.com/crimx/hexo-filter-github-emojis" target="_blank" rel="noopener">GitHub</a><br>大佬的文章：<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">https://reuixiy.github.io</a><br>另：附上另一个表情包网站：<a href="https://www.emojicopy.com/" target="_blank" rel="noopener">https://www.emojicopy.com</a></p>
+<hr>
+
+<h4 id="文章结束标志"><a href="#文章结束标志" class="headerlink" title="文章结束标志"></a>文章结束标志</h4><p>在<code>~/themes/next/layout/_macro/</code>目录下新建一个<code>end-tag.swig</code>文件，添加如下代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span></span><br><span class="line">        ----- Thank you <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> for reading -----</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>----- Thank you &lt;i class=&quot;fa fa-paw&quot;&gt;&lt;/i&gt; for reading -----</code>这一部分可以改成你自己想要显示的内容，之后修改同级目录下的<code>post.swig</code>文件，在<code>END POST BODY</code>后面，添加如下代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> not is_index %&#125;</span><br><span class="line">    &#123;% include <span class="string">'end-tag.swig'</span> %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>注意这里代码添加的位置根据自己的需要来添加，我这里是添加到:</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.tags and post.tags.length and not is_index %&#125;</span><br><span class="line">  &lt;div class="post-tags"&gt;</span><br><span class="line">    &#123;% for tag in post.tags %&#125;</span><br><span class="line">      &lt;a href="&#123;&#123; url_for(tag.path) &#125;&#125;" &lt;i class="fa fa-tag"&gt;&lt;/i&gt; &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line"><span class="addition">+ &#123;% if not is_index %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;% include 'end-tag.swig' %&#125;</span></span><br><span class="line"><span class="addition">+ &#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h3><h4 id="字体设置"><a href="#字体设置" class="headerlink" title="字体设置"></a>字体设置</h4><p>编辑主题下的<code>source\css\_variables\custom.styl</code>文件,添加下面的代码(可根据需要修改)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 标题，修改成你期望的字体族</span></span><br><span class="line">$font-family-headings = Georgia, sans</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改成你期望的字体族</span></span><br><span class="line">$font-family-base = <span class="string">"Microsoft YaHei"</span>, Verdana, sans-serif</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代码字体</span></span><br><span class="line">$code-font-family = <span class="string">"Input Mono"</span>, <span class="string">"PT Mono"</span>, Consolas, Monaco, Menlo, monospace</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正文字体的大小</span></span><br><span class="line">$font-size-base = <span class="number">16</span>px</span><br><span class="line"></span><br><span class="line"><span class="comment">// 代码字体的大小</span></span><br><span class="line">$code-font-size = <span class="number">13</span>px</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="背景色块"><a href="#背景色块" class="headerlink" title="背景色块"></a>背景色块</h4><p>有时候我们希望能够对某些文字进行背景色填充，用Markdown语法好像不好实现，所以干脆自己自定义颜色填充，需要用的时候直接调用即可，具体的做法：编辑<code>themes/next/source/css/_custom</code>下的<code>custom.styl</code>文件,添加属性样式：</p>
+<figure class="highlight css"><figcaption><span>文件位置：themes/next/source/css/_custom/custom.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">// 颜色块-黄</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#inline-yellow</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  <span class="attribute">padding</span>:.<span class="number">2em</span> .<span class="number">6em</span> .<span class="number">3em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:bold;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f0ad4e</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 颜色块-绿</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#inline-green</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  <span class="attribute">padding</span>:.<span class="number">2em</span> .<span class="number">6em</span> .<span class="number">3em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:bold;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#5cb85c</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 颜色块-蓝</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#inline-blue</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  <span class="attribute">padding</span>:.<span class="number">2em</span> .<span class="number">6em</span> .<span class="number">3em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:bold;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#2780e3</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 颜色块-紫</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#inline-purple</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  <span class="attribute">padding</span>:.<span class="number">2em</span> .<span class="number">6em</span> .<span class="number">3em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:bold;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#9954bb</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在需要进行背景色填充的文字上加上相应的标签，例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id="inline-blue"&gt; 这是蓝色填充 &lt;/span&gt;</span><br><span class="line">&lt;span id="inline-purple"&gt; 这是紫色填充&lt;/span&gt;</span><br><span class="line">&lt;span id="inline-yellow"&gt; 这是黄色填充 &lt;/span&gt;</span><br><span class="line">&lt;span id="inline-green"&gt; 这是绿色填充 &lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">这是蓝色填充</span><br><span id="inline-purple">这是紫色填充</span><br><span id="inline-yellow">这是黄色填充</span><br><span id="inline-green">这是绿色填充</span></p>
+<hr>
+
+<h4 id="播放视频"><a href="#播放视频" class="headerlink" title="播放视频"></a>播放视频</h4><p><span id="inline-blue">使用插件</span></p>
+<p>要播放视需要用到一个插件<a href="https://github.com/MoePlayer/DPlayer" target="_blank" rel="noopener">dplayer</a>,将插件安装到站点文件夹的根目录下面，安装插件的命令如下：</p>
+<p>使用 npm 安装:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install dplayer --save 或者 npm install hexo-tag-dplayer --save</span><br></pre></td></tr></table></figure>
+<p>使用 yarn 安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add dplayer</span><br></pre></td></tr></table></figure>
+<p>安装完成后，将下面的代码添加到Markdown文件中，并相应的地址即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% dplayer url&quot;=https://******.mp4&quot; &quot;http://******.jpg&quot; &quot;api=https://api.prprpr.me/dplayer/&quot; &quot;id=&quot; &quot;loop=false&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<p><sapn id="inline-blue">直接在Markdown文件中插入外链接</sapn></p>
+<p>1、使用iframe标签：在Markdown文件中插入如下代码链接，链接可在视频网站获取</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=22642915&amp;cid=37570456&amp;page=1"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=22642915&amp;cid=37570456&amp;page=1"</span> <span class="attr">autoplay</span>=<span class="string">"false"</span> <span class="attr">controls</span>=<span class="string">"controls"</span> <span class="attr">width</span>=<span class="string">"100%"</span> <span class="attr">height</span>=<span class="string">"100%"</span>&gt;</span> <span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe src="//player.bilibili.com/player.html?aid=22642915&cid=37570456&page=1"> </iframe>
+
+<p>直接使用iframe标签插入视频，需要手工调整窗体大小，而且整体效果并不好。如果将宽度和高度设置为<code>width=&quot;100%&quot; height=&quot;100%&quot;</code>,可以解决手机端显示的问题，但是在电脑端显示变得很小。</p>
+<p>2、插入bilibili HTML5播放器</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"http://www.bilibili.com/html/html5player.html?aid=22642915&amp;cid=37570456"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"740"</span> <span class="attr">height</span>=<span class="string">"440"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="插入音乐"><a href="#插入音乐" class="headerlink" title="插入音乐"></a>插入音乐</h4><p>以网易云为例，打开网页版的网易云音乐，随便播放一首音乐，点击左侧专辑封面下面有一个生成外链播放器，复制下方的<code>HTML</code>代码并放到Markdown文件中即可。其中有两个个比较常用的参数可根据自己的需要进行设置：<code>height</code>设为0可隐藏播放器；<code>auto</code>设为0则表示手动播放，设为1则表示自动播放。</p>
+<p><img src="/picture/2018-05-17/Snipaste_2018-05-19_00-48-50.png" alt="wailian"></p>
+<p><img src="/picture/2018-05-17/Snipaste_2018-05-19_00-50-15.png" alt="wailian"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=28718818&amp;auto=1&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28718818&auto=0&height=66"></iframe>
+
+<p>或者直接用<code>HTMl</code>标签，写法如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"https://Xxx.mp3"</span> <span class="attr">style</span>=<span class="string">"max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;"</span> <span class="attr">controls</span>=<span class="string">"controls"</span> <span class="attr">loop</span>=<span class="string">"loop"</span> <span class="attr">preload</span>=<span class="string">"meta"</span>&gt;</span>Your browser does not support the audio tag.<span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="背景图和背景色"><a href="#背景图和背景色" class="headerlink" title="背景图和背景色"></a>背景图和背景色</h4><p>设置背景图片比较简单，修改<code>~/themes/next/source/css/_custom/</code>路径下的custom.styl文件，添加下面的代码即可：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123; </span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(背景图片的路径/Xxx.jpg);</span><br><span class="line">    <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">    <span class="attribute">background-repeat</span>: repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: contain;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不想设置背景图片，但又想修改默认的主题背景色，注意是背景色，不是背景图片，那么这个时候就可通过修改<code>~\themes\next\source\css\_variables\Pisces.styl</code>文件来修改默认的背景色，修改的参数如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// Settings for some of the most global styles.</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">$body-bg-color                = #DCDCDC   // 注意这里根据自己的需要进行设置，改为自己想要的颜色代码即可</span><br></pre></td></tr></table></figure>
+<div class="note info"><p>~\themes\next\source\css_variables 这个目录下保存了各个主题以及通用的基本配置参数</p></div>
+
+<hr>
+
+<h3 id="写作样式"><a href="#写作样式" class="headerlink" title="写作样式"></a>写作样式</h3><p>很多时候我们会发现，使用Markdown写作会有一定的局限性，毕竟有时候我们会想在文章中加入一些有意思的样式来提高文章的阅读效果。</p>
+<h4 id="主题自带样式：note标签"><a href="#主题自带样式：note标签" class="headerlink" title="主题自带样式：note标签"></a>主题自带样式：note标签</h4><p>这是Next自带的主题，在主题配置文件 (<code>config.yml</code>) 中有相关的设置。有关note的style可以在此处预览<i class="fa fa-hand-o-right" aria-hidden="true"></i><a href="https://github.com/iissnan/hexo-theme-next/pull/1697" target="_blank" rel="noopener">点我</a></p>
+<figure class="highlight js"><figcaption><span>主题配置文件:-\themes\next\config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  #  风格</span><br><span class="line">  style: simple</span><br><span class="line">  #  是否使用图标</span><br><span class="line">  icons: <span class="literal">true</span></span><br><span class="line">  border_radius: <span class="number">3</span></span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">用法以及效果:</span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note default"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>default<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note default"><p>default</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note primary"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>primary<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note primary"><p>primary</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note success"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>success<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note success"><p>success</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note info"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>info<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note info"><p>info</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note warning"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>warning<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note warning"><p>warning</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note danger"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>danger<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note danger"><p>danger</p></div>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"note danger no-icon"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>danger no-icon<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="note danger no-icon"><p>danger no-icon</p></div>
+
+<p>如果想修改默认的样式可以修改<code>~\themes\next\source\css\_variables\base.styl</code>文件，默认的样式如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Note colors</span></span><br><span class="line"><span class="comment">// --------------------------------------------------</span></span><br><span class="line"><span class="comment">// Read note light_bg_offset from NexT config and set in "lbg%" to use it as string variable.</span></span><br><span class="line">hexo-config(<span class="string">'note.light_bg_offset'</span>) is a <span class="string">'unit'</span> ? (lbg = unit(hexo-config(<span class="string">'note.light_bg_offset'</span>),<span class="string">"%"</span>)) : (lbg = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Default</span></span><br><span class="line">$note-default-border        = #777</span><br><span class="line">$note-<span class="keyword">default</span>-bg            = lighten(spin($note-<span class="keyword">default</span>-border, <span class="number">0</span>), <span class="number">94</span>% + lbg)</span><br><span class="line">$note-<span class="keyword">default</span>-text          = $note-<span class="keyword">default</span>-border</span><br><span class="line">$note-<span class="keyword">default</span>-icon          = <span class="string">"\f0a9"</span></span><br><span class="line"></span><br><span class="line">$note-modern-default-border = #e1e1e1</span><br><span class="line">$note-modern-<span class="keyword">default</span>-bg     = lighten(spin($note-modern-<span class="keyword">default</span>-border, <span class="number">10</span>), <span class="number">60</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-<span class="keyword">default</span>-text   = $grey-dim</span><br><span class="line">$note-modern-<span class="keyword">default</span>-hover  = darken(spin($note-modern-<span class="keyword">default</span>-text, <span class="number">-10</span>), <span class="number">32</span>%)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Primary</span></span><br><span class="line">$note-primary-border        = #6f42c1</span><br><span class="line">$note-primary-bg            = lighten(spin($note-primary-border, <span class="number">10</span>), <span class="number">92</span>% + lbg)</span><br><span class="line">$note-primary-text          = $note-primary-border</span><br><span class="line">$note-primary-icon          = <span class="string">"\f055"</span></span><br><span class="line"></span><br><span class="line">$note-modern-primary-border = #e1c2ff</span><br><span class="line">$note-modern-primary-bg     = lighten(spin($note-modern-primary-border, <span class="number">10</span>), <span class="number">40</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-primary-text   = #6f42c1</span><br><span class="line">$note-modern-primary-hover  = darken(spin($note-modern-primary-text, <span class="number">-10</span>), <span class="number">22</span>%)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Info</span></span><br><span class="line">$note-info-border           = #428bca</span><br><span class="line">$note-info-bg               = lighten(spin($note-info-border, <span class="number">-10</span>), <span class="number">91</span>% + lbg)</span><br><span class="line">$note-info-text             = $note-info-border</span><br><span class="line">$note-info-icon             = <span class="string">"\f05a"</span></span><br><span class="line"></span><br><span class="line">$note-modern-info-border    = #b3e5ef</span><br><span class="line">$note-modern-info-bg        = lighten(spin($note-modern-info-border, <span class="number">10</span>), <span class="number">50</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-info-text      = #31708f</span><br><span class="line">$note-modern-info-hover     = darken(spin($note-modern-info-text, <span class="number">-10</span>), <span class="number">32</span>%)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Success</span></span><br><span class="line">$note-success-border        = #5cb85c</span><br><span class="line">$note-success-bg            = lighten(spin($note-success-border, <span class="number">10</span>), <span class="number">90</span>% + lbg)</span><br><span class="line">$note-success-text          = $note-success-border</span><br><span class="line">$note-success-icon          = <span class="string">"\f058"</span></span><br><span class="line"></span><br><span class="line">$note-modern-success-border = #d0e6be</span><br><span class="line">$note-modern-success-bg     = lighten(spin($note-modern-success-border, <span class="number">10</span>), <span class="number">40</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-success-text   = #3c763d</span><br><span class="line">$note-modern-success-hover  = darken(spin($note-modern-success-text, <span class="number">-10</span>), <span class="number">27</span>%)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Warning</span></span><br><span class="line">$note-warning-border        = #f0ad4e</span><br><span class="line">$note-warning-bg            = lighten(spin($note-warning-border, <span class="number">10</span>), <span class="number">88</span>% + lbg)</span><br><span class="line">$note-warning-text          = $note-warning-border</span><br><span class="line">$note-warning-icon          = <span class="string">"\f06a"</span></span><br><span class="line"></span><br><span class="line">$note-modern-warning-border = #fae4cd</span><br><span class="line">$note-modern-warning-bg     = lighten(spin($note-modern-warning-border, <span class="number">10</span>), <span class="number">43</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-warning-text   = #8a6d3b</span><br><span class="line">$note-modern-warning-hover  = darken(spin($note-modern-warning-text, <span class="number">-10</span>), <span class="number">18</span>%)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Danger</span></span><br><span class="line">$note-danger-border         = #d9534f</span><br><span class="line">$note-danger-bg             = lighten(spin($note-danger-border, <span class="number">-10</span>), <span class="number">92</span>% + lbg)</span><br><span class="line">$note-danger-text           = $note-danger-border</span><br><span class="line">$note-danger-icon           = <span class="string">"\f056"</span></span><br><span class="line"></span><br><span class="line">$note-modern-danger-border  = #ebcdd2</span><br><span class="line">$note-modern-danger-bg      = lighten(spin($note-modern-danger-border, <span class="number">10</span>), <span class="number">35</span>% + (lbg * <span class="number">4</span>))</span><br><span class="line">$note-modern-danger-text    = #a94442</span><br><span class="line">$note-modern-danger-hover   = darken(spin($note-modern-danger-text, <span class="number">-10</span>), <span class="number">22</span>%)</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="主题自带样式：label标签"><a href="#主题自带样式：label标签" class="headerlink" title="主题自带样式：label标签"></a>主题自带样式：label标签</h4><p><code>label</code>标签与<code>note</code>标签类似，也是自带的，默认情况下是启用的。</p>
+<figure class="highlight js"><figcaption><span>文件路径:-\themes\next\config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Label tag.</span><br><span class="line">label: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">用法以及效果:</span> @前面是label名称，后面是要显示的文本内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@<span class="keyword">default</span> %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label default">default</span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label primary@primary %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label primary">primary</span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label success@success %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label success">success</span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label info@info %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label info">info</span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label warning@warning %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label warning">warning</span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label danger@danger %&#125;</span><br></pre></td></tr></table></figure>
+<span class="label danger">danger</span>
+<figure class="highlight js"><figcaption><span>默认的label样式</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Label colors</span></span><br><span class="line"><span class="comment">// --------------------------------------------------</span></span><br><span class="line">$label-<span class="keyword">default</span>              = lighten(spin($note-<span class="keyword">default</span>-border, <span class="number">0</span>), <span class="number">89</span>% + lbg)</span><br><span class="line">$label-primary              = lighten(spin($note-primary-border, <span class="number">10</span>), <span class="number">87</span>% + lbg)</span><br><span class="line">$label-info                 = lighten(spin($note-info-border, <span class="number">-10</span>), <span class="number">86</span>% + lbg)</span><br><span class="line">$label-success              = lighten(spin($note-success-border, <span class="number">10</span>), <span class="number">85</span>% + lbg)</span><br><span class="line">$label-warning              = lighten(spin($note-warning-border, <span class="number">10</span>), <span class="number">83</span>% + lbg)</span><br><span class="line">$label-danger               = lighten(spin($note-danger-border, <span class="number">-10</span>), <span class="number">87</span>% + lbg)</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="主题自带样式：tabs标签"><a href="#主题自带样式：tabs标签" class="headerlink" title="主题自带样式：tabs标签"></a>主题自带样式：tabs标签</h4><p><code>tabs</code>标签的效果有点类似于可切换的表格：</p>
+<figure class="highlight js"><figcaption><span>用法：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs 选项卡, <span class="number">2</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**这是选项卡 <span class="number">1</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**这是选项卡 <span class="number">2</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**这是选项卡 <span class="number">3</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">效果:</span></p>
+<div class="tabs" id="选项卡"><ul class="nav-tabs"><li class="tab"><a href="#选项卡-1">选项卡 1</a></li><li class="tab active"><a href="#选项卡-2">选项卡 2</a></li><li class="tab"><a href="#选项卡-3">选项卡 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="选项卡-1"><p><strong>这是选项卡 1</strong> 上面的选项卡点击可以切换</p>
+</div><div class="tab-pane active" id="选项卡-2"><p><strong>这是选项卡 2</strong></p>
+</div><div class="tab-pane" id="选项卡-3"><p><strong>这是选项卡 3</strong> </p>
+</div></div></div>
+<hr>
+
+<h4 id="主题自带样式：按钮"><a href="#主题自带样式：按钮" class="headerlink" title="主题自带样式：按钮"></a>主题自带样式：按钮</h4><figure class="highlight"><figcaption><span>用法:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn URL, Text, icon [class], Title %&#125;</span><br><span class="line"># URL: 按钮的链接地址，例如：https://www.github.com</span><br><span class="line"># Text: 按钮上显示的文本信息，例如：github</span><br><span class="line"># icon[class]: 按钮上显示图标</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">效果:</span></p>
+<p><a class="btn" href="https://www.baidu.com" target="_blank" rel="noopener"><i class="fa fa-download fa-lg fa-fw"></i>百度一下</a></p>
+
+<p>更多按钮的用法可以查看这位大佬的文章：<a href="https://almostover.ru/2016-01/hexo-theme-next-test/#Button-tag-test" target="_blank" rel="noopener">https://almostover.ru/2016-01/hexo-theme-next-test/#Button-tag-test</a></p>
+<hr>
+
+<h4 id="主题自带样式：代码块高亮"><a href="#主题自带样式：代码块高亮" class="headerlink" title="主题自带样式：代码块高亮"></a>主题自带样式：代码块高亮</h4><figure class="highlight java"><figcaption><span>java代码高亮</span><a href="https://www.baidu.com" target="_blank" rel="noopener">百度一下，你就知道</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.prinltn(<span class="string">"Hello World !"</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">完整的用法:</span></p>
+<div class="note info"><p>在第一个```后面添加相应的信息即可：[language] [title] [url] [link-text]</p></div>
+
+<p><i class="fa fa-hand-o-right" aria-hidden="true"></i> [language] 是代码语言的名称，用来设置代码块颜色高亮，非必须；<br><i class="fa fa-hand-o-right" aria-hidden="true"></i> [title] 是顶部左边的说明，非必须；<br><i class="fa fa-hand-o-right" aria-hidden="true"></i> [url] 是顶部右边的超链接地址，非必须；<br><i class="fa fa-hand-o-right" aria-hidden="true"></i> [link text] 如它的字面意思，超链接的名称，非必须。</p>
+<hr>
+
+<h4 id="添加居中模块"><a href="#添加居中模块" class="headerlink" title="添加居中模块"></a>添加居中模块</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote <span class="class"><span class="keyword">class</span></span>=<span class="string">"blockquote-center"</span>&gt;生活不止眼前的苟且，还有诗和远方！&lt;<span class="regexp">/blockquote&gt;</span></span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">效果:</span></p>
+<blockquote class="blockquote-center">生活不止眼前的苟且，还有诗和远方！</blockquote>
+
+<hr>
+
+<h4 id="插入图片与PDF文档"><a href="#插入图片与PDF文档" class="headerlink" title="插入图片与PDF文档"></a>插入图片与PDF文档</h4><p>关于Hexo的其他配置可以参考：<em><strong><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官方文档</a></strong></em></p>
+<p><i class="fa fa-hand-o-right" aria-hidden="true"></i> <span id="inline-purple">插入图片:</span></p>
+<p><strong>使用Markdown插入图片的语法格式如下:</strong></p>
+<div class="note info"><p>![Alt text](path)</p></div>
+
+<p><code>[Alt text]：图片的描述文字</code><br><code>[path]：图片所在的路径</code></p>
+<p><strong>除了使用Markdown之外，也可以使用HTML的<code>&lt;img&gt;</code>标签:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"image_path"</span> <span class="attr">tltle</span>=<span class="string">"titleName"</span> <span class="attr">alt</span>=<span class="string">"altName"</span> <span class="attr">width</span>=<span class="string">"width"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>[image path]：图片的路径</code><br><code>[Alt text]：显示的文本</code><br><code>[width]：图片的宽度</code></p>
+<p>效果图片：<br><img src="/picture/2018-05-17/wallhaven-165463.jpg" title="Girl" alt="测试图片"></p>
+<p><i class="fa fa-hand-o-right" aria-hidden="true"></i> <span id="inline-purple">插入PDF文档:</span></p>
+<p>将相应的PDF文档放在与博客标题同名的文件夹内，然后再按照如下方式进行插入:</p>
+<div class="note info"><p><code>[PDF File](FileName.pdf)</code></p></div>
+
+<p><a href="\PDF\Vim实用技巧.pdf">这是插入的PDF文档</a></p>
+<hr>
+
+<h4 id="添加注脚"><a href="#添加注脚" class="headerlink" title="添加注脚"></a>添加注脚</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-reference --save</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue">用法：</span></p>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i> <strong>使用指南</strong><br>1、加注：this is a basic footnote[^text] ##text是显示的文本，例如1.<br>2、在文章的任意位置添加注脚的内容，如：[^text]:这里写注脚要显示的内容.<br></div>
+
+<p><span id="inline-blue">效果：</span></p>
+<p>这是一个注脚<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="这是一个用于测试的注脚">[1]</span></a></sup>，在解析md文章的时候，会在文章的最后生成一个注脚。</p>
+<hr>
+
+<h4 id="自定义Note标签"><a href="#自定义Note标签" class="headerlink" title="自定义Note标签"></a>自定义Note标签</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.alert-warning</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#c09853</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fcf8e3</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#faebcc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.alert-success</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#468847</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#dff0d8</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#d6e9c6</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.alert-info</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#3a87ad</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#e2eaee</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#c5d5dd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.alert-danger</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#b94a48</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f2dede</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#ebccd1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-success"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-lightbulb-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> BUG虐我千百遍，我待BUG如初恋 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i> BUG虐我千百遍，我待BUG如初恋 </div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-info"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-info"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> BUG虐我千百遍，我待BUG如初恋 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="alert alert-info"><i class="fa fa-info"></i> BUG虐我千百遍，我待BUG如初恋 </div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-warning"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-bell"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> BUG虐我千百遍，我待BUG如初恋 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="alert alert-warning"><i class="fa fa-bell"></i> BUG虐我千百遍，我待BUG如初恋 </div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert-danger"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-bug"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> BUG虐我千百遍，我待BUG如初恋 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="alert alert-danger"><i class="fa fa-bug"></i> BUG虐我千百遍，我待BUG如初恋 </div>
+
+<h4 id="TOC数字块"><a href="#TOC数字块" class="headerlink" title="TOC数字块"></a>TOC数字块</h4><figure class="highlight css"><figcaption><span>样式</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.section-number-2</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">80%</span> <span class="number">100%</span> <span class="number">90%</span> <span class="number">20%</span>;</span><br><span class="line">    <span class="attribute">word-wrap</span>: break-word<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#8c8c8c</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">min-width</span>: .<span class="number">8em</span>;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">3em</span> .<span class="number">4em</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span> <span class="number">5px</span> <span class="number">2px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><span id="inline-blue"> 效果：</span></p>
+<p><span class="section-number-2">1.</span><code>&lt;span class=&quot;section-number-2&quot;&gt;&lt;/span&gt;</code></p>
+<hr>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 清除缓存</span><br><span class="line">hexo clean</span><br><span class="line">// 渲染成html</span><br><span class="line">hexo g</span><br><span class="line">// 本地部署</span><br><span class="line">hexo s || hexo s -p 端口号</span><br><span class="line">// 远程部署</span><br><span class="line">hexo d</span><br><span class="line">// 安装插件</span><br><span class="line">npm install &quot;插件名称&quot; --save</span><br><span class="line">// 卸载插件</span><br><span class="line">npm uninstall &quot;插件名称&quot; --save</span><br><span class="line">// 查看依赖包信息</span><br><span class="line">cat package.json</span><br></pre></td></tr></table></figure>
+<hr>
+
+<p>下面是我的依赖包信息，主要是一些已安装的插件信息：</p>
+<figure class="highlight js"><figcaption><span>依赖包</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"hexo"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"3.7.1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">    <span class="string">"gulp-htmlclean"</span>: <span class="string">"^2.7.22"</span>,</span><br><span class="line">    <span class="string">"gulp-htmlmin"</span>: <span class="string">"^4.0.0"</span>,</span><br><span class="line">    <span class="string">"gulp-minify-css"</span>: <span class="string">"^1.2.4"</span>,</span><br><span class="line">    <span class="string">"gulp-uglify"</span>: <span class="string">"^3.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo"</span>: <span class="string">"^3.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-git"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.5"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-baidu-sitemap"</span>: <span class="string">"^0.1.2"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.2.1"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-searchdb"</span>: <span class="string">"^1.0.8"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-sitemap"</span>: <span class="string">"^1.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-reference"</span>: <span class="string">"^1.0.3"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.3.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.3.1"</span>,</span><br><span class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">    <span class="string">"hexo-tag-aplayer"</span>: <span class="string">"^3.0.4"</span>,</span><br><span class="line">    <span class="string">"hexo-tag-dplayer"</span>: <span class="string">"^0.3.3"</span>,</span><br><span class="line">    <span class="string">"hexo-wordcount"</span>: <span class="string">"^3.0.2"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h3 id="Seo优化"><a href="#Seo优化" class="headerlink" title="Seo优化"></a>Seo优化</h3><h4 id="中文链接问题"><a href="#中文链接问题" class="headerlink" title="中文链接问题"></a>中文链接问题</h4><p><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">插件github地址</a></p>
+<p>默认情况下，hexo使用文章创建的时间和文章的标题作为访问URL的一部分，但这样有一个问题就是，如果你的文章标题使用了中文，那么，访问的URL地址中就会出现中文，所以如果你是处女座或者有强迫症，这种问题是绝对不能忍受的，当然，从另一方面来看，这也不利于搜索优化，所以我们要对其进行改进，这里采用的方法是使用<code>hexo-abbrlink</code>插件，用法相当简单，先安装插件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>修改站点配置文件，搜索<code>permalink</code>，修改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">permalink: :abbrlink.html   # 生成唯一链接</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc16  # 算法:crc16(默认) and crc32</span><br><span class="line">  rep: dec    # 进制:dec(默认) and hex</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h4><p>博客搭建完之后，如果我们希望搜索引擎能够快速地收录我们的博客，那么我们就可以利用百度或者Google的站长工具主动推送自己的博客，因为我自己并没有提交到Google，所以，这里以百度为例，提交到百度可以从两个方面来进行，第一个是登录百度站长平台主动提交站点信息，这一部分基本都是图形化操作，这里就不说了；另一个就是使用Next自带的SEO优化功能，这一部分的设置可以在<code>主题配置文件</code>中开启:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_push: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>接下在<code>~/themes/next/source/js/src</code>下新建一个js文件:sitemap.js，内容为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// SEO自动推送</span><br><span class="line">(function()&#123;</span><br><span class="line">    var bp = document.createElement(&apos;script&apos;);</span><br><span class="line">    var curProtocol = window.location.protocol.split(&apos;:&apos;)[0];</span><br><span class="line">    if (curProtocol === &apos;https&apos;) &#123;</span><br><span class="line">        bp.src = &apos;https://zz.bdstatic.com/linksubmit/push.js&apos;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        bp.src = &apos;http://push.zhanzhang.baidu.com/push.js&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>完了之后，需要在页面中引入<code>sitemap.js</code>，我这里是在<code>~/themes/next/layout/_custom</code>目录下的<code>header.swig</code>文件中引入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;/js/src/sitemap.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h4 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h4><p>要使用站点地图，需要安装插件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>接下来修改<code>站点配置文件</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 网站地图</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<p>站点地图在执行<code>hexo g</code>命令完整渲染后生成的<code>sitemap.xml</code>和<code>baidusitemap.xml</code>会放置到<code>public</code>文件夹下</p>
+<hr>
+
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><blockquote>
+<p>由于非JS出身，在博客的搭建与优化的过程中，碰到了不少问题，也走了不少弯路，但是由衷感谢各位大神的文章，让自己学到了不少东西，下面是本人参考过的部分文章以及文档。</p>
+</blockquote>
+<p>配置参考：<br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://qianling.pw" target="_blank" rel="noopener">https://qianling.pw</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://www.ofind.cn/" target="_blank" rel="noopener">https://www.ofind.cn/</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://reuixiy.github.io" target="_blank" rel="noopener">https://reuixiy.github.io</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://www.vincentqin.tech" target="_blank" rel="noopener">https://www.vincentqin.tech</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/writing.html</a><br><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="https://zhuanlan.zhihu.com/p/30836436" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30836436</a><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">这是一个用于测试的注脚<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果您觉得我的文章对您有帮助，请随意赞赏，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赞赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Mackvord 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Mackvord 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Mackvord
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://mackvord.github.io/hexo/3167973627.html" title="Hexo+NexT+Github Pages">https://mackvord.github.io/hexo/3167973627.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" <i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/搭建/" <i class="fa fa-tag"></i> 搭建</a>
+          
+            <a href="/tags/配置与优化/" <i class="fa fa-tag"></i> 配置与优化</a>
+          
+        </div>
+      
+
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">----- Thank you <i class="fa fa-paw"></i> for reading -----</div>
+    
+</div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo/3147575311.html" rel="prev" title="Hexo-报错汇总">
+                <i class="fa fa-chevron-left"></i> Hexo-报错汇总
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo/1243066710.html" rel="next" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/picture/wallhaven-62220.jpg"
+                alt="Mackvord" />
+            
+              <p class="site-author-name" itemprop="name">Mackvord</p>
+              <p class="site-description motion-element" itemprop="description">10000000000</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/mackvord" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mackvord@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/m/playlist?id=2403432736" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://leetcode.com/" target="_blank" title="LeetCode">
+                      
+                        <i class="fa fa-fw fa-code"></i>LeetCode</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-handshake-o"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mackvord.github.io/about/" title="关于此博客" target="_blank">关于此博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="days"></div>
+<script language="javascript">
+	function show_date_time(){
+		window.setTimeout("show_date_time()", 1000);
+		BirthDay=new Date("05/16/2018 10:30:00");
+		today=new Date();
+		timeold=(today.getTime()-BirthDay.getTime());
+		sectimeold=timeold/1000
+		secondsold=Math.floor(sectimeold);
+		msPerDay=24*60*60*1000
+		e_daysold=timeold/msPerDay
+		daysold=Math.floor(e_daysold);
+		e_hrsold=(e_daysold-daysold)*24;
+		hrsold=setzero(Math.floor(e_hrsold));
+		e_minsold=(e_hrsold-hrsold)*60;
+		minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+		seconds=setzero(Math.floor((e_minsold-minsold)*60));
+		document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+	}
+	function setzero(i){
+		if (i<10){
+			i="0" + i
+		};
+		return i;
+	}
+	show_date_time();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化配置"><span class="nav-number">2.</span> <span class="nav-text">优化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#侧栏新建页面"><span class="nav-number">2.1.</span> <span class="nav-text">侧栏新建页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PDF预览"><span class="nav-number">2.2.</span> <span class="nav-text">PDF预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#摘要图片"><span class="nav-number">2.3.</span> <span class="nav-text">摘要图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页文章篇数"><span class="nav-number">2.4.</span> <span class="nav-text">首页文章篇数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#首页文章分割线"><span class="nav-number">2.5.</span> <span class="nav-text">首页文章分割线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打赏功能"><span class="nav-number">2.6.</span> <span class="nav-text">打赏功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁用打赏文字抖动"><span class="nav-number">2.7.</span> <span class="nav-text">禁用打赏文字抖动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面宽度"><span class="nav-number">2.8.</span> <span class="nav-text">页面宽度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上一篇，下一篇顺序"><span class="nav-number">2.9.</span> <span class="nav-text">上一篇，下一篇顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标题栏信息调整"><span class="nav-number">2.10.</span> <span class="nav-text">标题栏信息调整</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章置顶"><span class="nav-number">2.11.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#透明度设置"><span class="nav-number">2.12.</span> <span class="nav-text">透明度设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导航头背景图"><span class="nav-number">2.13.</span> <span class="nav-text">导航头背景图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博文压缩"><span class="nav-number">2.14.</span> <span class="nav-text">博文压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章顶部加载条"><span class="nav-number">2.15.</span> <span class="nav-text">文章顶部加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击爱心效果"><span class="nav-number">2.16.</span> <span class="nav-text">点击爱心效果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建JS文件"><span class="nav-number">2.16.1.</span> <span class="nav-text">创建JS文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改-layout-swig文件"><span class="nav-number">2.16.2.</span> <span class="nav-text">修改_layout.swig文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云颜色"><span class="nav-number">2.17.</span> <span class="nav-text">标签云颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加emoji表情"><span class="nav-number">2.18.</span> <span class="nav-text">添加emoji表情</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章结束标志"><span class="nav-number">2.19.</span> <span class="nav-text">文章结束标志</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个性化配置"><span class="nav-number">3.</span> <span class="nav-text">个性化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字体设置"><span class="nav-number">3.1.</span> <span class="nav-text">字体设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景色块"><span class="nav-number">3.2.</span> <span class="nav-text">背景色块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放视频"><span class="nav-number">3.3.</span> <span class="nav-text">播放视频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入音乐"><span class="nav-number">3.4.</span> <span class="nav-text">插入音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景图和背景色"><span class="nav-number">3.5.</span> <span class="nav-text">背景图和背景色</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写作样式"><span class="nav-number">4.</span> <span class="nav-text">写作样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主题自带样式：note标签"><span class="nav-number">4.1.</span> <span class="nav-text">主题自带样式：note标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题自带样式：label标签"><span class="nav-number">4.2.</span> <span class="nav-text">主题自带样式：label标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题自带样式：tabs标签"><span class="nav-number">4.3.</span> <span class="nav-text">主题自带样式：tabs标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题自带样式：按钮"><span class="nav-number">4.4.</span> <span class="nav-text">主题自带样式：按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题自带样式：代码块高亮"><span class="nav-number">4.5.</span> <span class="nav-text">主题自带样式：代码块高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加居中模块"><span class="nav-number">4.6.</span> <span class="nav-text">添加居中模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入图片与PDF文档"><span class="nav-number">4.7.</span> <span class="nav-text">插入图片与PDF文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加注脚"><span class="nav-number">4.8.</span> <span class="nav-text">添加注脚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义Note标签"><span class="nav-number">4.9.</span> <span class="nav-text">自定义Note标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TOC数字块"><span class="nav-number">4.10.</span> <span class="nav-text">TOC数字块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">5.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Seo优化"><span class="nav-number">6.</span> <span class="nav-text">Seo优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#中文链接问题"><span class="nav-number">6.1.</span> <span class="nav-text">中文链接问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动推送"><span class="nav-number">6.2.</span> <span class="nav-text">自动推送</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点地图"><span class="nav-number">6.3.</span> <span class="nav-text">站点地图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">7.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mackvord</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-line-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">58.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered By <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and NexT</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'yuJoRwSW8MCeTjCnPr0CKYxk-9Nh9j0Va',
+        appKey: 'KKOXM0H6WnWcFSUlJ31pg3yq',
+        placeholder: '欢迎留言、交流',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

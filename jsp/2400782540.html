@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mackvord-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/mackvord-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="jsp,jsp简介,jsp注释," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="运行在服务器端的动态网页技术–JSP">
+<meta name="keywords" content="jsp,jsp简介,jsp注释">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP学习笔记(1)">
+<meta property="og:url" content="https://mackvord.github.io/jsp/2400782540.html">
+<meta property="og:site_name" content="Mackvord&#39;s Blogs">
+<meta property="og:description" content="运行在服务器端的动态网页技术–JSP">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-08T04:03:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSP学习笔记(1)">
+<meta name="twitter:description" content="运行在服务器端的动态网页技术–JSP">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mackvord.github.io/jsp/2400782540.html"/>
+
+
+
+
+
+  <title>JSP学习笔记(1) | Mackvord's Blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/mackvord" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mackvord's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">1.00110000101111e+24</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-documents">
+          <a href="/documents" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-movie">
+          <a href="/movie/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-film"></i> <br />
+            
+            电影
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+<link href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+<link href="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.js"></script>
+<script src="/js/src/sitemap.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mackvord.github.io/jsp/2400782540.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mackvord">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/wallhaven-62220.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mackvord's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JSP学习笔记(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T19:34:11+08:00">
+                2018-07-10
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-08T12:03:10+08:00">
+                2018-09-08
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jsp/" itemprop="url" rel="index">
+                    <span itemprop="name">jsp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jsp/2400782540.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/jsp/2400782540.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.9k
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p></p><p class="description">运行在服务器端的动态网页技术–JSP</p><br><a id="more"></a><p></p>
+<h2 id="JSP简介"><a href="#JSP简介" class="headerlink" title="JSP简介"></a>JSP简介</h2><p><code>JSP</code>全称为<code>Java Server Pages</code>，是基于<code>Servlet</code>建立的一种动态网页技术标准，相比传统的<code>HTML</code>页面，使用<code>JSP</code>技术可以在HTML页面中嵌入<code>Java</code>代码。<a href="http://www.runoob.com/jsp/jsp-tutorial.html" target="_blank" rel="noopener">点击此处</a>了解更多关于JSP技术的信息。</p>
+<hr>
+
+<h2 id="JSP脚本"><a href="#JSP脚本" class="headerlink" title="JSP脚本"></a>JSP脚本</h2><p>想要使用JSP脚本，有三种方式，其语法如下：</p>
+<blockquote>
+<ol>
+<li>&lt;% java代码 %&gt;</li>
+<li>&lt;%= java表达式 %&gt;</li>
+<li>&lt;%! java代码 %&gt;</li>
+</ol>
+</blockquote>
+<p>关于三种语法形式的区别如下表，</p>
+<table>
+<thead>
+<tr>
+<th>语法形式</th>
+<th>区别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;% java代码 %&gt;</td>
+<td>代码在服务器端执行时会被放到service()方法内部执行</td>
+</tr>
+<tr>
+<td>&lt;%= java表达式 %&gt;</td>
+<td>代码会被放到service()方法内部的out.print(java表达式)中执行</td>
+</tr>
+<tr>
+<td>&lt;%! java代码 %&gt;</td>
+<td>代码会被放到service()方法的外部，类的内部，作为成员内容执行</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h2 id="JSP注释"><a href="#JSP注释" class="headerlink" title="JSP注释"></a>JSP注释</h2><p>JSP文件中有<code>三种注释方式</code></p>
+<blockquote>
+<ol>
+<li>HTML注释：<!-- JSP文件可以使用HTML注释--></li>
+<li>Java注释：由于使用Java作为脚本语言，所以JSP文件支持Java的注释方式，包括单行(<code>//</code>)、多行(<code>/**/</code>)与文档注释(<code>/** */</code>)</li>
+<li>JSP注释：&lt;%– JSP注释 –%&gt;</li>
+</ol>
+</blockquote>
+<p>在JSP文件中，不同的注释其可见范围是不一样的</p>
+<table>
+<thead>
+<tr>
+<th>JSP支持的注释</th>
+<th>可见范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML注释</td>
+<td>JSP源码、翻译后的Servlet、HTML源码</td>
+</tr>
+<tr>
+<td>Java注释</td>
+<td>翻译后的Servlet、HTML源码</td>
+</tr>
+<tr>
+<td>JSP注释</td>
+<td>JSP源码</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h2 id="JSP运行原理"><a href="#JSP运行原理" class="headerlink" title="JSP运行原理"></a>JSP运行原理</h2><p>jsp文件在第一次被访问时会Web容器翻译成Servlet程序并编译运行。编译运行后的文件存放在<code>Tomcat安装目录/work/Catalina/localhost/项目名称/org/apache/jsp</code>路径下。</p>
+<hr>
+
+<h2 id="JSP指令"><a href="#JSP指令" class="headerlink" title="JSP指令"></a>JSP指令</h2><p>JSP指令用来设置整个页面的相关属性，比如页面编码、引入标签库等。JSP文件中可以设置三个指令，每个指令有不同的属性。</p>
+<p><span id="inline-blue">指令：</span></p>
+<table>
+<thead>
+<tr>
+<th>JSP指令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;%@page …%&gt;</td>
+<td>定义网页的一些基本属性，例如：编码、错误页面、是否使用session等</td>
+</tr>
+<tr>
+<td>&lt;%@include …%&gt;</td>
+<td>页面包含</td>
+</tr>
+<tr>
+<td>&lt;%@taglib …%&gt;</td>
+<td>引入标签库</td>
+</tr>
+</tbody>
+</table>
+<p><span id="inline-blue">Page指令常用属性：</span></p>
+<table>
+<thead>
+<tr>
+<th>Page指令属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageEncoding</td>
+<td>当前jsp文件的编码</td>
+</tr>
+<tr>
+<td>import</td>
+<td>导入java包</td>
+</tr>
+<tr>
+<td>language</td>
+<td>jsp文件中嵌入的语言类型</td>
+</tr>
+<tr>
+<td>contextType</td>
+<td>指定当前JSP页面的MIME类型和字符编码</td>
+</tr>
+<tr>
+<td>session</td>
+<td>指定JSP页面是否使用session</td>
+</tr>
+<tr>
+<td>errorPage</td>
+<td>指定当前JSP页面发生异常时需要跳转到的错误处理页面</td>
+</tr>
+<tr>
+<td>isErrorPage</td>
+<td>指定当前页面是否可以作为另一个JPS页面的错误页面</td>
+</tr>
+<tr>
+<td>extends</td>
+<td>指定JSP页面翻译后的Servlet要继承的类</td>
+</tr>
+</tbody>
+</table>
+<p><span id="inline-blue">include指令：</span>文件包含指令或者说页面包含指令（静态页面），即可以将一个JSP页面包含到另一个JSP页面中，其语法如下：&lt;%@include file=”文件地址” %&gt;，此处的地址是一个相对的地址。</p>
+<p><span id="inline-blue">taglib指令：</span>此指令用于引入自定义的标签库，其语法如下：<code>&lt;%@taglib uri=&quot;标签库地址&quot; prefix=&quot;标签前缀&quot;&gt;</code>，<code>标签前缀</code>可以自由定义。</p>
+<hr>
+
+<h2 id="JSP隐式对象"><a href="#JSP隐式对象" class="headerlink" title="JSP隐式对象"></a>JSP隐式对象</h2><p>JSP中的隐式对象由容器负责创建，因此可以直接使用。</p>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>ServletRequest</td>
+<td>获取用户请求信息</td>
+</tr>
+<tr>
+<td>response</td>
+<td>ServletResponse</td>
+<td>服务器响应信息</td>
+</tr>
+<tr>
+<td>config</td>
+<td>ServletConfig</td>
+<td>服务器配置，获取初始化参数</td>
+</tr>
+<tr>
+<td>page</td>
+<td>Object</td>
+<td>指定当前页面转换后的Servlet类实例</td>
+</tr>
+<tr>
+<td>session</td>
+<td>HttpSession</td>
+<td>保存用户信息</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>PageContext</td>
+<td>JSP页面容器</td>
+</tr>
+<tr>
+<td>application</td>
+<td>ServletContext</td>
+<td>所有用户的共享信息</td>
+</tr>
+<tr>
+<td>out</td>
+<td>JspWriter</td>
+<td>页面输出</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>Exception</td>
+<td>JSP页面所发生的异常，只在错误页面起作用</td>
+</tr>
+</tbody>
+</table>
+<p><span id="inline-blue">四个作用域的范围</span></p>
+<blockquote>
+<p>page域：当前JSP页面<br>session域：一次会话<br>application域：整个web应用<br>request域：一次请求</p>
+</blockquote>
+<figure class="highlight"><figcaption><span>部分示例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span> session=<span class="string">"true"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- html注释 --&gt;</span><br><span class="line">    &lt;%-- JSP注释 --%&gt;</span><br><span class="line">    <span class="comment">// 单行注释</span></span><br><span class="line">    <span class="comment">/* 多行注释 */</span></span><br><span class="line">    <span class="comment">/** 文档注释 */</span></span><br><span class="line">    &lt;!-- 文本最终会由out.write()方法输出 --&gt;</span><br><span class="line">    <span class="keyword">this</span> is a test !</span><br><span class="line">    &lt;%</span><br><span class="line">        <span class="comment">// 九大隐式对象，由容器自动创建</span></span><br><span class="line">        <span class="comment">// 由于Out缓冲区中的数据最终会被加载到response缓冲区中，所以out.write()输出的数据会在response.getWriter().write()之后</span></span><br><span class="line">        <span class="comment">// 1.out对象</span></span><br><span class="line">        out.write(<span class="string">"-- 隐式对象：Out"</span>) ;</span><br><span class="line">        <span class="comment">// 2.response对象</span></span><br><span class="line">        response.getWriter().write(<span class="string">"隐式对象：response --"</span>) ;</span><br><span class="line">        <span class="comment">// 3.request对象</span></span><br><span class="line">        request.setAttribute(<span class="string">"JSESSIONID"</span>, request.getSession().getId()) ;</span><br><span class="line">        <span class="comment">// 4.pageContext域对象,此对象可以向其他指定的域中存取数据</span></span><br><span class="line">        <span class="comment">// 向请求域中设置属性</span></span><br><span class="line">        request.setAttribute(<span class="string">"age"</span>, <span class="string">"17"</span>);</span><br><span class="line">        <span class="comment">// page域</span></span><br><span class="line">        pageContext.setAttribute(<span class="string">"age"</span>, <span class="string">"16"</span>);</span><br><span class="line">        <span class="comment">// request域</span></span><br><span class="line">        pageContext.setAttribute(<span class="string">"age"</span>, <span class="string">"18"</span>, PageContext.REQUEST_SCOPE);</span><br><span class="line">        <span class="comment">// session域</span></span><br><span class="line">        pageContext.setAttribute(<span class="string">"age"</span>, <span class="string">"19"</span>, PageContext.SESSION_SCOPE);</span><br><span class="line">        <span class="comment">// application域</span></span><br><span class="line">        pageContext.setAttribute(<span class="string">"age"</span>, <span class="string">"20"</span>, PageContext.APPLICATION_SCOPE);</span><br><span class="line">    %&gt;&lt;br /&gt;</span><br><span class="line">    &lt;%=<span class="string">"JSESSIONID: "</span> + (String)request.getAttribute(<span class="string">"JSESSIONID"</span>)%&gt;</span><br><span class="line">    &lt;%-- findAttribuite()方法默认会从小到大搜索域范围中的age,其大小关系为 page域&lt;request域&lt;session域&lt;application域 --%&gt;</span><br><span class="line">    &lt;%=pageContext.findAttribute(<span class="string">"age"</span>) %&gt;</span><br><span class="line">    &lt;%= <span class="string">"age= "</span> + pageContext.getAttribute(<span class="string">"age"</span>, PageContext.REQUEST_SCOPE)%&gt;</span><br><span class="line">    &lt;%-- pageContext对象可以获得其他八个隐式对象 --%&gt;</span><br><span class="line">    &lt;% </span><br><span class="line">        pageContext.getException();</span><br><span class="line">        pageContext.getOut();</span><br><span class="line">        pageContext.getPage();</span><br><span class="line">        pageContext.getRequest();</span><br><span class="line">        pageContext.getResponse();</span><br><span class="line">        pageContext.getServletConfig();</span><br><span class="line">        pageContext.getServletContext();</span><br><span class="line">        pageContext.getSession();</span><br><span class="line">    %&gt;</span><br><span class="line">    &lt;%! </span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">8</span> ;</span><br><span class="line">    %&gt;</span><br><span class="line">    &lt;%-- 转发指令 --%&gt;</span><br><span class="line">    &lt;jsp:forward page="/include.jap" &gt;&lt;/jsp:forward&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<h2 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h2><p>EL表达式的作用主要就是简化JSP代码的编写，提高代码的可维护性。</p>
+<h3 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h3><table>
+<thead>
+<tr>
+<th>对象</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageScope</td>
+<td>用于获取JSP域中的数据</td>
+</tr>
+<tr>
+<td>requestScope</td>
+<td>用于获取JSP域中的数据</td>
+</tr>
+<tr>
+<td>sessionScope</td>
+<td>用于获取JSP域中的数据</td>
+</tr>
+<tr>
+<td>applicationScope</td>
+<td>用于获取JSP域中的数据</td>
+</tr>
+<tr>
+<td>parma</td>
+<td>接收参数</td>
+</tr>
+<tr>
+<td>parmaValues</td>
+<td>接收参数</td>
+</tr>
+<tr>
+<td>header</td>
+<td>获取请求头部信息</td>
+</tr>
+<tr>
+<td>headerValues</td>
+<td>获取请求头部信息</td>
+</tr>
+<tr>
+<td>initParma</td>
+<td>获取全局初始化参数</td>
+</tr>
+<tr>
+<td>cookie</td>
+<td>获取Cookie数据</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>获取其他8个隐式对象</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h2><p>所谓JSTL即JSP标准标签库，是一个JSP标签集合，在JSP页面中使用JSTL可以完成一些业务逻辑代码的编写。根据JSTL标签的功能可以分五部分，<code>核心标签（core）</code>、<code>格式化标签（I18N）</code>、<code>SQL标签</code>、<code>XML标签</code>、<code>JSTL函数标签（functions）</code>。目前最新的是<code>2015</code>年发布的<code>Standard 1.2.3</code>,<a href="http://tomcat.apache.org/taglibs/standard/" target="_blank" rel="noopener">下载地址</a>。</p>
+<p>下面是一些代码示例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">"java.util.*"</span> %&gt;</span><br><span class="line">&lt;%@ page <span class="keyword">import</span>=<span class="string">"com.my.domain.*"</span> %&gt;</span><br><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> prefix=<span class="string">"c"</span> %&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">        <span class="comment">// 模拟list&lt;String&gt;,输出集合中的数据</span></span><br><span class="line">        List&lt;String&gt; strList = <span class="keyword">new</span> ArrayList&lt;String&gt;() ;</span><br><span class="line">        strList.add(<span class="string">"Alibaba"</span>) ;</span><br><span class="line">        strList.add(<span class="string">"Amazon"</span>) ;</span><br><span class="line">        strList.add(<span class="string">"Google"</span>) ;</span><br><span class="line">        strList.add(<span class="string">"Apple"</span>) ;</span><br><span class="line">        strList.add(<span class="string">"Baidu"</span>) ;</span><br><span class="line">        strList.add(<span class="string">"Tencent"</span>) ;</span><br><span class="line">        request.setAttribute(<span class="string">"strList"</span>, strList) ;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历List&lt;User&gt;中的所有数据</span></span><br><span class="line">        List&lt;User&gt; userList = <span class="keyword">new</span> ArrayList&lt;User&gt;() ;</span><br><span class="line">        <span class="comment">// User为实体类</span></span><br><span class="line">        User user1 = <span class="keyword">new</span> User() ;</span><br><span class="line">        user1.setId(<span class="string">"1"</span>) ;</span><br><span class="line">        user1.setName(<span class="string">"Tom"</span>);</span><br><span class="line">        user1.setPassword(<span class="string">"123"</span>) ;</span><br><span class="line">        userList.add(user1) ;</span><br><span class="line">        User user2 = <span class="keyword">new</span> User() ;</span><br><span class="line">        user2.setId(<span class="string">"1"</span>) ;</span><br><span class="line">        user2.setName(<span class="string">"Jerry"</span>);</span><br><span class="line">        user2.setPassword(<span class="string">"123"</span>) ;</span><br><span class="line">        userList.add(user2) ;</span><br><span class="line">        application.setAttribute(<span class="string">"userList"</span>, userList) ;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历Map&lt;String, String&gt;中的所有数据</span></span><br><span class="line">        Map&lt;String,String&gt; strMap = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">        strMap.put(<span class="string">"name"</span>,<span class="string">"Jerry"</span>) ;</span><br><span class="line">        strMap.put(<span class="string">"email"</span>,<span class="string">"jerry@163.com"</span>) ;</span><br><span class="line">        strMap.put(<span class="string">"addr"</span>,<span class="string">"guangzhou"</span>) ;</span><br><span class="line">        strMap.put(<span class="string">"age"</span>,<span class="string">"20"</span>) ;</span><br><span class="line">        session.setAttribute(<span class="string">"strMap"</span>, strMap) ;</span><br><span class="line">    %&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;%-- 取出strList中的数据 --%&gt;</span><br><span class="line">    &lt;h3&gt;forEach取出strList中的数据&lt;/h3&gt;</span><br><span class="line">    &lt;c:forEach items=<span class="string">"$&#123;strList&#125;"</span> var=<span class="string">"str"</span>&gt;</span><br><span class="line">    &lt;!-- 换行是为了避免字符串覆盖 --&gt;</span><br><span class="line">        $&#123;str&#125;&lt;br /&gt;</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;h3&gt;forEach取出userList中的数据&lt;/h3&gt;</span><br><span class="line">    &lt;c:forEach items=<span class="string">"$&#123;userList&#125;"</span> var=<span class="string">"user"</span>&gt;</span><br><span class="line">        Username:$&#123;user.name&#125;--</span><br><span class="line">        Password:$&#123;user.password&#125;&lt;br /&gt;</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">    &lt;h3&gt;forEach取出strMap中的数据&lt;/h3&gt;</span><br><span class="line">    &lt;c:forEach items=<span class="string">"$&#123;strMap&#125;"</span> var=<span class="string">"map"</span>&gt;</span><br><span class="line">        $&#123;map.key&#125;:</span><br><span class="line">        $&#123;map.value&#125;&lt;br /&gt;</span><br><span class="line">    &lt;/c:forEach&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果您觉得我的文章对您有帮助，请随意赞赏，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赞赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Mackvord 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Mackvord 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Mackvord
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://mackvord.github.io/jsp/2400782540.html" title="JSP学习笔记(1)">https://mackvord.github.io/jsp/2400782540.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jsp/" <i class="fa fa-tag"></i> jsp</a>
+          
+            <a href="/tags/jsp简介/" <i class="fa fa-tag"></i> jsp简介</a>
+          
+            <a href="/tags/jsp注释/" <i class="fa fa-tag"></i> jsp注释</a>
+          
+        </div>
+      
+
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">----- Thank you <i class="fa fa-paw"></i> for reading -----</div>
+    
+</div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/transaction/1774183904.html" rel="prev" title="初识事务">
+                <i class="fa fa-chevron-left"></i> 初识事务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/session-cookie/2682590331.html" rel="next" title="Cookie & Session">
+                Cookie & Session <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/picture/wallhaven-62220.jpg"
+                alt="Mackvord" />
+            
+              <p class="site-author-name" itemprop="name">Mackvord</p>
+              <p class="site-description motion-element" itemprop="description">10000000000</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/mackvord" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mackvord@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://music.163.com/#/m/playlist?id=2403432736" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-music"></i>网易云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://leetcode.com/" target="_blank" title="LeetCode">
+                      
+                        <i class="fa fa-fw fa-code"></i>LeetCode</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-handshake-o"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mackvord.github.io/about/" title="关于此博客" target="_blank">关于此博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="days"></div>
+<script language="javascript">
+	function show_date_time(){
+		window.setTimeout("show_date_time()", 1000);
+		BirthDay=new Date("05/16/2018 10:30:00");
+		today=new Date();
+		timeold=(today.getTime()-BirthDay.getTime());
+		sectimeold=timeold/1000
+		secondsold=Math.floor(sectimeold);
+		msPerDay=24*60*60*1000
+		e_daysold=timeold/msPerDay
+		daysold=Math.floor(e_daysold);
+		e_hrsold=(e_daysold-daysold)*24;
+		hrsold=setzero(Math.floor(e_hrsold));
+		e_minsold=(e_hrsold-hrsold)*60;
+		minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+		seconds=setzero(Math.floor((e_minsold-minsold)*60));
+		document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+	}
+	function setzero(i){
+		if (i<10){
+			i="0" + i
+		};
+		return i;
+	}
+	show_date_time();
+</script>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP简介"><span class="nav-number">1.</span> <span class="nav-text">JSP简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP脚本"><span class="nav-number">2.</span> <span class="nav-text">JSP脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP注释"><span class="nav-number">3.</span> <span class="nav-text">JSP注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP运行原理"><span class="nav-number">4.</span> <span class="nav-text">JSP运行原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP指令"><span class="nav-number">5.</span> <span class="nav-text">JSP指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP隐式对象"><span class="nav-number">6.</span> <span class="nav-text">JSP隐式对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EL表达式"><span class="nav-number">7.</span> <span class="nav-text">EL表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置对象"><span class="nav-number">7.1.</span> <span class="nav-text">内置对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSTL"><span class="nav-number">8.</span> <span class="nav-text">JSTL</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mackvord</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-line-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">58.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered By <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and NexT</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'yuJoRwSW8MCeTjCnPr0CKYxk-9Nh9j0Va',
+        appKey: 'KKOXM0H6WnWcFSUlJ31pg3yq',
+        placeholder: '欢迎留言、交流',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
