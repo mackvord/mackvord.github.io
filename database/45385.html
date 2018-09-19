@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://mackvord.github.io/picture/2018-09-12/20180917100254.png">
 <meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png?v8">
 <meta property="og:image" content="https://mackvord.github.io/GIF/2018091701.gif">
-<meta property="og:updated_time" content="2018-09-17T08:01:54.727Z">
+<meta property="og:updated_time" content="2018-09-19T09:20:51.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多表查询与子查询的性能比较">
 <meta name="twitter:description" content="使用MySQL官方提供的测试数据库来测试多表关联查询与子查询的性能到底谁更胜一筹">
@@ -388,8 +388,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-17T16:01:54+08:00">
-                2018-09-17
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-19T17:20:51+08:00">
+                2018-09-19
               </time>
             
           </span>
@@ -523,7 +523,7 @@
 <p>执行以下语句:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysqlslap -h localhost -P 3306 <span class="comment">--concurrency=50 --number-of-queries=500 --create-schema='employees' </span></span><br><span class="line"><span class="comment">--query='</span></span><br><span class="line"><span class="keyword">select</span> d.dept_no,d.dept_name,temp.count </span><br><span class="line"><span class="keyword">from</span> departments d <span class="keyword">left</span> <span class="keyword">join</span> (</span><br><span class="line">  <span class="keyword">select</span> de.dept_no,<span class="keyword">count</span>(e.emp_no) <span class="keyword">count</span> </span><br><span class="line">  <span class="keyword">from</span> employees e </span><br><span class="line">  <span class="keyword">left</span> <span class="keyword">join</span> dept_emp de <span class="keyword">on</span> e.emp_no = de.emp_no </span><br><span class="line">  <span class="keyword">group</span> <span class="keyword">by</span> de.dept_no</span><br><span class="line">  ) temp </span><br><span class="line">  <span class="keyword">on</span> d.dept_no = temp.dept_no;' </span><br><span class="line">  -u mackvord -p</span><br></pre></td></tr></table></figure>
 <p><img src="/picture/2018-09-12/20180917100254.png" alt="子查询"></p>
-<p>通过两次执行的结果来看，多表查询用了将近5分钟，而子查询用了3分钟多一点，虽然两次查询的速度都有点慢<img class="github-emoji" alt="joy" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png?v8" height="20" width="20">，但是貌似子查询的速度要快一点？这样下结论好像太草率了，毕竟这只是<code>查询每个部门的编号、名称以及部门的人数</code>，对于其他的不同需求，可能编写的sql语句就不一样，那么执行的性能也会有所差异，所以还得看具体问题。OK，文章到此就告一段落了，时间间再继续补充吧。<img src="/GIF/2018091701.gif" alt="gif"></p>
+<p>通过两次执行的结果来看，多表查询用了将近5分钟，而子查询用了3分钟多一点，虽然两次查询的速度都有点慢<img class="github-emoji" alt="joy" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png?v8" height="20" width="20">，但是貌似子查询的速度要快一点？这样下结论好像太草率了，毕竟这只是<code>查询每个部门的编号、名称以及部门的人数</code>，对于其他的不同需求，可能编写的sql语句就不一样，那么执行的性能也会有所差异，所以还得看具体问题。OK，文章到此就告一段落了，有时间再继续补充吧。<img src="/GIF/2018091701.gif" alt="gif"></p>
 <hr>
 
       
