@@ -134,7 +134,7 @@
 <meta property="og:image" content="https://mackvord.github.io/picture/2018-09-21/20180921171807.png">
 <meta property="og:image" content="https://mackvord.github.io/picture/2018-09-21/20180921171817.png">
 <meta property="og:image" content="https://mackvord.github.io/GIF/2018091702.gif">
-<meta property="og:updated_time" content="2018-09-21T14:50:55.673Z">
+<meta property="og:updated_time" content="2018-09-22T02:54:22.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deepin安装Oracle 12c R2(详细)">
 <meta name="twitter:description" content="图解在deepin系统下安装Oracle Database 12c Release 2数据库">
@@ -425,8 +425,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-21T22:50:55+08:00">
-                2018-09-21
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-22T10:54:22+08:00">
+                2018-09-22
               </time>
             
           </span>
@@ -532,7 +532,7 @@
 <hr>
 
 <h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>使用以下命令创建Oracle用户，并设置密码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">groupadd dba</span><br><span class="line">useradd -d /opt/oracle -m -c "Oracle Database" -g dba -G sudo -s `which bash` oracle</span><br><span class="line">passwd oracle</span><br><span class="line"><span class="meta">#</span># -d：参数是指定用户主目录</span><br><span class="line"><span class="meta">#</span># -m：自动建立用户的登入目录</span><br><span class="line"><span class="meta">#</span># -c：用户描述</span><br><span class="line"><span class="meta">#</span># -g：指定用户所属的组</span><br><span class="line"><span class="meta">#</span># -G：指定用户所属的附加组</span><br><span class="line"><span class="meta">#</span># -s：指定用户登入后所使用的shell</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">groupadd dba</span><br><span class="line">useradd -d /opt/oracle -m -c "Oracle Database" -g dba -G sudo -s `which bash` oracle</span><br><span class="line">passwd oracle</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -d：参数是指定用户主目录</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -m：自动建立用户的登入目录</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -c：用户描述</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -g：指定用户所属的组</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -G：指定用户所属的附加组</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -s：指定用户登入后所使用的shell</span></span></span><br></pre></td></tr></table></figure>
 <p><img src="/picture/2018-09-21/20180920202427.png" alt="add user"></p>
 <hr>
 
@@ -599,7 +599,7 @@
 <p><img src="/picture/2018-09-21/20180921171203.png" alt=""></p>
 <p>接下来指定数据恢复选项，这里也直接跳过，选择next</p>
 <p><img src="/picture/2018-09-21/20180921171152.png" alt=""></p>
-<p>接下来指定数据库密码，为了方面，这里我将密码统一设置为<code>oracleadmin</code>，这里的密码是不符合强度要求的，真实的生产环境是不可能设置，这里仅仅是为了方便个人学习使用而设置成这样的。</p>
+<p>接下来指定数据库密码，为了方面，这里我将密码统一设置为<code>oracleadmin</code>，这里的密码是不符合强度要求的，真实的生产环境是不可能设置成这样的，这里仅仅是为了方便个人学习使用而设置成这样。</p>
 <p><img src="/picture/2018-09-21/20180921171130.png" alt=""></p>
 <p>设置完密码后，会提示密码不符合oracle的标准，问你是否继续，选择<code>yes</code>继续即可</p>
 <p><img src="/picture/2018-09-21/20180921171140.png" alt=""></p>
@@ -647,7 +647,7 @@
 <p>bingo…测试没问题，至此，Oracle Database 12c Release 2已经在deepin上安装成功了。</p>
 <hr>
 
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说，这一次安装Oracle数据库几乎花费了我一整天的时间，是24小时的那种，因为学校晚上12点断网，所以在安装的过程中遇到问题（在安装到65%出错的时候恰好已经过了12点）的时候没法上网查找，不得不留到第二天继续安装，中间我都没关电脑，再加上写这篇文章，估计都满24小时了。不过最终能够安装成功也算有所收收获，毕竟在安装的过程中自己也学到了不少东西，包括linux上的各种配置以及命令的使用。OK，文章到此就结束了，撒花~~~~</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说，这一次安装Oracle数据库几乎花费了我一整天的时间，期间因为学校晚上12点断网，所以在安装的过程中遇到问题（在安装到65%出错的时候恰好已经过了12点）的时候没法上网查找，不得不留到第二天继续安装，中间我都没关电脑，再加上写这篇文章，也花费了不少的时间，不过最终能够安装成功也算有所收收获，毕竟在安装的过程中自己也学到了不少东西，包括linux上的各种配置以及命令的使用。OK，文章到此就结束了，撒花~~~~</p>
 <p><img src="/GIF/2018091702.gif" alt="jump"></p>
 <hr>
 
