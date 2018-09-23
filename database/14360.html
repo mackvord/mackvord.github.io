@@ -134,7 +134,7 @@
 <meta property="og:image" content="https://mackvord.github.io/picture/2018-09-21/20180921171807.png">
 <meta property="og:image" content="https://mackvord.github.io/picture/2018-09-21/20180921171817.png">
 <meta property="og:image" content="https://mackvord.github.io/GIF/2018091702.gif">
-<meta property="og:updated_time" content="2018-09-22T02:54:22.565Z">
+<meta property="og:updated_time" content="2018-09-23T14:08:05.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deepin安装Oracle 12c R2(详细)">
 <meta name="twitter:description" content="图解在deepin系统下安装Oracle Database 12c Release 2数据库">
@@ -425,8 +425,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-22T10:54:22+08:00">
-                2018-09-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-23T22:08:05+08:00">
+                2018-09-23
               </time>
             
           </span>
@@ -486,7 +486,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  2.4k
+                  2.5k
                 </span>
               
 
@@ -532,7 +532,7 @@
 <hr>
 
 <h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>使用以下命令创建Oracle用户，并设置密码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">groupadd dba</span><br><span class="line">useradd -d /opt/oracle -m -c "Oracle Database" -g dba -G sudo -s `which bash` oracle</span><br><span class="line">passwd oracle</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -d：参数是指定用户主目录</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -m：自动建立用户的登入目录</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -c：用户描述</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -g：指定用户所属的组</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -G：指定用户所属的附加组</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -s：指定用户登入后所使用的shell</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">groupadd dba</span><br><span class="line">useradd -d /opt/oracle -m -c "Oracle Database" -g dba -G sudo -s `which bash` oracle</span><br><span class="line">passwd oracle</span><br><span class="line"><span class="meta">#</span># -d：参数是指定用户主目录</span><br><span class="line"><span class="meta">#</span># -m：自动建立用户的登入目录</span><br><span class="line"><span class="meta">#</span># -c：用户描述</span><br><span class="line"><span class="meta">#</span># -g：指定用户所属的组</span><br><span class="line"><span class="meta">#</span># -G：指定用户所属的附加组</span><br><span class="line"><span class="meta">#</span># -s：指定用户登入后所使用的shell</span><br></pre></td></tr></table></figure>
 <p><img src="/picture/2018-09-21/20180920202427.png" alt="add user"></p>
 <hr>
 
@@ -647,9 +647,14 @@
 <p>bingo…测试没问题，至此，Oracle Database 12c Release 2已经在deepin上安装成功了。</p>
 <hr>
 
+<h2 id="关于连接"><a href="#关于连接" class="headerlink" title="关于连接"></a>关于连接</h2><p>电脑关机之后，Oracle数据库会被关闭，所以在下次连接数据库之前，需要启动监听服务并且启动数据库，具体做法如就是，打开终端，执行<code>lsnrctl start</code>启动监听服务，然后，使用<code>sqlplus &quot;/as sysdba&quot;</code>切换到<code>SQL&gt;</code>模式，执行<code>startup</code>启动数据库。</p>
+<hr>
+
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说，这一次安装Oracle数据库几乎花费了我一整天的时间，期间因为学校晚上12点断网，所以在安装的过程中遇到问题（在安装到65%出错的时候恰好已经过了12点）的时候没法上网查找，不得不留到第二天继续安装，中间我都没关电脑，再加上写这篇文章，也花费了不少的时间，不过最终能够安装成功也算有所收收获，毕竟在安装的过程中自己也学到了不少东西，包括linux上的各种配置以及命令的使用。OK，文章到此就结束了，撒花~~~~</p>
 <p><img src="/GIF/2018091702.gif" alt="jump"></p>
 <hr>
+
+
 
 
       
@@ -957,7 +962,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前准备"><span class="nav-number">2.</span> <span class="nav-text">安装前准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装"><span class="nav-number">3.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压文件"><span class="nav-number">3.1.</span> <span class="nav-text">解压文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建用户"><span class="nav-number">3.2.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改参数"><span class="nav-number">3.3.</span> <span class="nav-text">修改参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖"><span class="nav-number">3.4.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立软连接"><span class="nav-number">3.5.</span> <span class="nav-text">建立软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行安装程序"><span class="nav-number">3.6.</span> <span class="nav-text">运行安装程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形化安装"><span class="nav-number">3.7.</span> <span class="nav-text">图形化安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置环境变量"><span class="nav-number">3.8.</span> <span class="nav-text">配置环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试安装"><span class="nav-number">4.</span> <span class="nav-text">测试安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前准备"><span class="nav-number">2.</span> <span class="nav-text">安装前准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装"><span class="nav-number">3.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压文件"><span class="nav-number">3.1.</span> <span class="nav-text">解压文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建用户"><span class="nav-number">3.2.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改参数"><span class="nav-number">3.3.</span> <span class="nav-text">修改参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖"><span class="nav-number">3.4.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立软连接"><span class="nav-number">3.5.</span> <span class="nav-text">建立软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行安装程序"><span class="nav-number">3.6.</span> <span class="nav-text">运行安装程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形化安装"><span class="nav-number">3.7.</span> <span class="nav-text">图形化安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置环境变量"><span class="nav-number">3.8.</span> <span class="nav-text">配置环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试安装"><span class="nav-number">4.</span> <span class="nav-text">测试安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于连接"><span class="nav-number">5.</span> <span class="nav-text">关于连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -991,7 +996,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">62.1k</span>
+    <span title="Site words total count">62.2k</span>
   
 </div>
 
