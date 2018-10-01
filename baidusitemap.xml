@@ -4,19 +4,19 @@
 
     
   <url>
-    <loc>https://mackvord.github.io/regular-expression/28322.html</loc>
-    <lastmod>2018-09-29T12:01:42.821Z</lastmod>
+    <loc>https://mackvord.github.io/webmagic/20535.html</loc>
+    <lastmod>2018-10-01T10:04:54.884Z</lastmod>
     <data>
         <display>
-        <title>关于正则表达式的一点理解</title>
-        <pubTime>2018-09-29T03:57:07.000Z</pubTime>
+        <title>WebMagic启动流程的分析</title>
+        <pubTime>2018-10-01T07:50:29.000Z</pubTime>
         
-        <tag>正则</tag>
+        <tag>WebMagic</tag>
          
          
            
              
-              <breadCrumb title="regular_expression" url="https://mackvord.github.io/categories/regular-expression/"/>
+              <breadCrumb title="webmagic" url="https://mackvord.github.io/categories/webmagic/"/>
           
         </display>
     </data>
@@ -25,7 +25,7 @@
     
   <url>
     <loc>https://mackvord.github.io/webmagic/47770.html</loc>
-    <lastmod>2018-09-29T03:38:00.281Z</lastmod>
+    <lastmod>2018-10-01T09:40:48.034Z</lastmod>
     <data>
         <display>
         <title>webmagic入门-爬取校内电影网信息</title>
@@ -41,6 +41,26 @@
            
              
               <breadCrumb title="webmagic" url="https://mackvord.github.io/categories/webmagic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mackvord.github.io/regular-expression/28322.html</loc>
+    <lastmod>2018-09-29T12:01:42.821Z</lastmod>
+    <data>
+        <display>
+        <title>关于正则表达式的一点理解</title>
+        <pubTime>2018-09-29T03:57:07.000Z</pubTime>
+        
+        <tag>正则</tag>
+         
+         
+           
+             
+              <breadCrumb title="regular_expression" url="https://mackvord.github.io/categories/regular-expression/"/>
           
         </display>
     </data>
