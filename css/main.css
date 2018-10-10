@@ -1950,7 +1950,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1f41;
+  background: #8245cd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3469,6 +3469,13 @@ h6 {
   height: 40px;
   text-align: center;
   line-height: 40px;
+}
+.links-of-blogroll-item a {
+  font-size: 16px;
+}
+.links-of-blogroll-item a:hover {
+  background-color: #e7e7e7;
+  margin: auto;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
