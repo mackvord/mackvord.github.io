@@ -1950,7 +1950,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #400fe2;
+  background: #17ff7c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3274,10 +3274,6 @@ hr {
   border-radius: 30px;
   font-size: 15px;
   box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 15px 45px 0 rgba(0,0,0,0.19);
-}
-.site-meta {
-  background-image: url("/picture/background/Flowing_Ribbon.jpg");
-  background-size: cover;
 }
 .posts-expand .post-body .fancybox img {
   border: none;
