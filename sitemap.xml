@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mackvord.github.io/movie/index.html</loc>
+    
+    <lastmod>2018-10-14T06:21:48.535Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mackvord.github.io/documents/index.html</loc>
     
     <lastmod>2018-10-12T05:53:10.137Z</lastmod>
@@ -306,13 +313,6 @@
     <loc>https://mackvord.github.io/tags/index.html</loc>
     
     <lastmod>2018-09-06T06:03:12.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mackvord.github.io/movie/index.html</loc>
-    
-    <lastmod>2018-09-06T06:02:37.000Z</lastmod>
     
   </url>
   
